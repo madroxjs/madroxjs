@@ -8,13 +8,11 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { ThemeProvider } from "@mui/material";
+import { FromLibrary } from 'library/components';
 
 const App = () => (
 <ThemeProvider theme={theme}>
-    <div>Name: madrox</div>
-    <div>Framework: react</div>
-    <div>Language: TypeScript</div>
-    <div>CSS: Empty CSS</div>
+    <FromLibrary madrox="madrox" />
   </ThemeProvider>
 );
 ReactDOM.render(<App />, document.getElementById("app"));

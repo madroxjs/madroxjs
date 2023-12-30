@@ -41,9 +41,11 @@ module.exports = (_, argv) => ({
 
   plugins: [
     new ModuleFederationPlugin({
-      name: "madrox",
-      filename: "madroxEntry.js",
-      remotes: {},
+      name: "mShell",
+      filename: "shellEntry.js",
+      remotes: {
+        library: "mLibrary@http://localhost:7001/libraryEntry.js"
+      },
       exposes: {},
       shared: {
         ...deps,
