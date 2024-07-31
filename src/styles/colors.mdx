@@ -1,0 +1,53 @@
+{/* Colors.mdx */}
+
+import * as colors from 'tailwindcss/colors'
+
+import { Meta, ColorPalette, ColorItem } from '@storybook/blocks';
+ 
+<Meta title="Styles/Colors" />
+ 
+<ColorPalette>
+    {Object.entries(colors).map(([colorName, shades], key) => {
+        
+        if(typeof shades !== "object" || colorName == "default") return        
+        return (<ColorItem
+        key={key}
+        title={colorName}
+        subtitle="Some of the greys"
+        colors={{
+            50:  shades[50],
+            100: shades[100],
+            200: shades[200],
+            300: shades[300],
+            400: shades[400],
+            500:shades[500],
+            600:shades[600],
+            700: shades[700],
+            800:shades[800],
+            900:shades[900],
+            950: shades[950],
+        }} 
+    />)
+  })}
+  
+  {/* <ColorItem 
+    title="theme.color.primary" 
+    subtitle="Coral" 
+    colors={{ WildWatermelon: '#FF4785' }} 
+  />
+  <ColorItem 
+    title="theme.color.secondary" 
+    subtitle="Ocean" 
+    colors={{ DodgerBlue: '#1EA7FD' }} 
+  />
+  <ColorItem
+    title="theme.color.positive"
+    subtitle="Green"
+    colors={{
+      Apple: 'rgba(102,191,60,1)',
+      Apple80: 'rgba(102,191,60,.8)',
+      Apple60: 'rgba(102,191,60,.6)',
+      Apple30: 'rgba(102,191,60,.3)',
+    }}
+  /> */}
+</ColorPalette>
