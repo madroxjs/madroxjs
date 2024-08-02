@@ -12,7 +12,6 @@ function App() {
         <Routes>
           <Route path="/" element={<IndexPage />} />        
           <Route path="/block" element={<Block />} />
-          <Route path="/block" element={<Block />} />
           <Route path="/characters" element={<CharactersPage />} />
         </Routes>
       </Router>

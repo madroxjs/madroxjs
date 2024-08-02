@@ -1,1 +1,1 @@
-export { Label } from './component'
+export * from './component';

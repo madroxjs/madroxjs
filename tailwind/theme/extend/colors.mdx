@@ -1,0 +1,50 @@
+{/* Colors.mdx */}
+
+import { semanticNames } from './colors'
+import * as colors from 'tailwindcss/colors'
+
+import { Meta, ColorPalette, ColorItem } from '@storybook/blocks';
+
+<Meta title="Styles/Colors/Semantic" />
+ 
+<ColorPalette>
+    {Object.entries(colors).map(([colorName, shades], key) => {
+        if(!semanticNames[colorName]) return
+
+
+        if(typeof shades !== "object" || colorName == "default") return
+        return (<ColorItem
+        key={key}
+        title={semanticNames[colorName]}
+        colors={{
+            lightest:  shades[50],
+            lighter: shades[200],
+            light: shades[300], 
+            DEFAULT: shades[500], 
+            darker: shades[700],
+            darkest: shades[900],
+        }} 
+    />)
+  })}
+  
+  {/* <ColorItem 
+    title="theme.color.primary" 
+    subtitle="Coral" 
+    colors={{ WildWatermelon: '#FF4785' }} 
+  />
+  <ColorItem 
+    title="theme.color.secondary" 
+    subtitle="Ocean" 
+    colors={{ DodgerBlue: '#1EA7FD' }} 
+  />
+  <ColorItem
+    title="theme.color.positive"
+    subtitle="Green"
+    colors={{
+      Apple: 'rgba(102,191,60,1)',
+      Apple80: 'rgba(102,191,60,.8)',
+      Apple60: 'rgba(102,191,60,.6)',
+      Apple30: 'rgba(102,191,60,.3)',
+    }}
+  /> */}
+</ColorPalette>
