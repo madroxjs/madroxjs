@@ -9,9 +9,9 @@ const meta: Meta<typeof Checkbox> = {
   component: Checkbox,
   parameters: {
     docs: {
-      subtitle: 'Displays a badge or a component that looks like a badge.',
+      subtitle: 'A control that allows the user to toggle between checked and not checked.',
       description: {
-        component: '[ShadCn Documentation](https://ui.shadcn.com/docs/components/badge)'
+        component: '[ShadCn Documentation](https://ui.shadcn.com/docs/components/checkbox) | [Radix UI Documentation](https://www.radix-ui.com/primitives/docs/components/checkbox) | [API Reference](https://www.radix-ui.com/primitives/docs/components/checkbox#api-reference)'
       },
     },
   },

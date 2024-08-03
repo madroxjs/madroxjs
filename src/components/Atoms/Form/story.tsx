@@ -1,26 +1,23 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { fn } from '@storybook/test';
-
-import { Form } from '.';
+import { Form } from '.'
+import { FormDemo } from './demo'
 
 const meta: Meta<typeof Form> = {
   component: Form,
   parameters: {
     docs: {
-      subtitle: 'Displays a form or a component that looks like a form.',
+      subtitle: 'Building forms with React Hook Form and Zod.',
       description: {
-        component: '[ShadCn Documentation](https://ui.shadcn.com/docs/components/form)'
+        component: '[ShadCn Documentation](https://ui.shadcn.com/docs/components/form) | [React Hook Form](https://react-hook-form.com/)'
       },
     },
   },
-  args: { onClick: fn() },
+  args: { },
 };
 
 export default meta;
 type Story = StoryObj<typeof Form>;
 
 export const Default: Story = {
-  args: {
-    children: 'Form',
-  },
+  render: () => <FormDemo />
 };

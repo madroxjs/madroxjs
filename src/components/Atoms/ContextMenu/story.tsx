@@ -23,7 +23,7 @@ const meta: Meta<typeof ContextMenu> = {
     docs: {
       subtitle: 'Displays a menu to the user — such as a set of actions or functions — triggered by a button.',
       description: {
-        component: `[ShadCn Documentation](https://ui.shadcn.com/docs/components/context-menu) | [Radix UI Documentation](https://www.radix-ui.com/themes/docs/components/context-menu)`
+        component: `[ShadCn Documentation](https://ui.shadcn.com/docs/components/context-menu) | [API Reference](https://www.radix-ui.com/primitives/docs/components/context-menu#api-reference)`
       },
     },
   },
