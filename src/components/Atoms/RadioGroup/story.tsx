@@ -7,9 +7,9 @@ const meta: Meta<typeof RadioGroup> = {
   component: RadioGroup,
   parameters: {
     docs: {
-      subtitle: 'Displays a radiogroup or a component that looks like a radiogroup.',
+      subtitle: 'A set of checkable buttons—known as radio buttons—where no more than one of the buttons can be checked at a time.',
       description: {
-        component: '[ShadCn Documentation](https://ui.shadcn.com/docs/components/radiogroup)'
+        component: '[ShadCn Documentation](https://ui.shadcn.com/docs/components/radio-group) | [Radix UI Documentation](https://www.radix-ui.com/primitives/docs/components/radio-group) | [API Reference](https://www.radix-ui.com/primitives/docs/components/radio-group#api-reference)'
       },
     },
   },

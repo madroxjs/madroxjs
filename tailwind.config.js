@@ -1,6 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 
-import tailwind from './tailwind'
+import theme from './tailwind/theme'
+
+console.log("theme", theme)
 
 export default {
   darkMode: ["class"],
@@ -12,7 +14,7 @@ export default {
   ],
   prefix: "",
   theme: {
-    ...tailwind.theme,
+    ...theme,
     container: {
       center: true,
       padding: "2rem",

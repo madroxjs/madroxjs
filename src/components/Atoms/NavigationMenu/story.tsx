@@ -7,9 +7,9 @@ const meta: Meta<typeof NavigationMenu> = {
   component: NavigationMenu,
   parameters: {
     docs: {
-      subtitle: 'Displays a navigationmenu or a component that looks like a navigationmenu.',
+      subtitle: 'A collection of links for navigating websites.',
       description: {
-        component: '[ShadCn Documentation](https://ui.shadcn.com/docs/components/navigationmenu)'
+        component: '[ShadCn Documentation](https://ui.shadcn.com/docs/components/navigation-menu) | [Radix UI Documentation](https://www.radix-ui.com/primitives/docs/components/navigation-menu) | [API Reference](https://www.radix-ui.com/primitives/docs/components/navigation-menu#api-reference)'
       },
     },
   },

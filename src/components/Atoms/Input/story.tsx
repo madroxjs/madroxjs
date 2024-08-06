@@ -1,11 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
 
-import { Input as component } from '.';
+import { Input } from '.';
+import { Button, Label } from '@/components'
+import { InputForm } from './demo'
 
- 
-const meta: Meta<typeof component> = {
-  component,
+const meta: Meta<typeof Input> = {
+  component: Input,
   parameters: {
     docs: {
       subtitle: 'Displays a badge or a component that looks like a badge.',
@@ -18,7 +19,7 @@ const meta: Meta<typeof component> = {
 };
  
 export default meta;
-type Story = StoryObj<typeof component>;
+type Story = StoryObj<typeof Input>;
  
 export const Default: Story = {
   args: {
@@ -26,3 +27,35 @@ export const Default: Story = {
     placeholder: "Email",
   },
 };
+
+export const File: Story = {
+  render: () => <div className="grid w-full max-w-sm items-center gap-1.5">
+  <Label htmlFor="picture">Picture</Label>
+  <Input id="picture" type="file" />
+</div>
+}
+
+export const Disabled: Story = {
+  args: {
+    disabled: true,
+    placeholder: 'Email'
+  }
+}
+
+export const WithLabel: Story = {
+  render: () => <div className="grid w-full max-w-sm items-center gap-1.5">
+  <Label htmlFor="email">Email</Label>
+  <Input type="email" id="email" placeholder="Email" />
+</div>
+}
+
+export const WithButton: Story = {
+  render: () => <div className="flex w-full max-w-sm items-center space-x-2">
+  <Input type="email" placeholder="Email" />
+  <Button type="submit">Subscribe</Button>
+</div>
+}
+
+export const WithForm: Story = {
+  render: () => <InputForm />
+}

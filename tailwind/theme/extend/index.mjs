@@ -5,7 +5,6 @@ import borders from './borders'
 import colors from './colors'
 import effects from './effects'
 import filters from './filters'
-import flex from './flex'
 import grid from './grid'
 import interactivity from './interactivity'
 import layout from './layout'
@@ -16,14 +15,12 @@ import tables from './tables'
 import transforms from './transforms'
 import typography from './typography'
 
-import extend from './extend'
 
 export default {
   ...accessiblity,
   ...animation,
   ...backgrounds,
   ...borders,
-  ...colors,
   ...effects,
   ...filters,
   ...grid,
@@ -35,6 +32,7 @@ export default {
   ...tables,
   ...transforms,
   ...typography,
+  colors: colors.default,
 }
 
 export {

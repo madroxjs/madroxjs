@@ -6,18 +6,19 @@ const desiredShades = {
     '600': 'dark',
     '700': 'darker',
     '900': 'darkest'
-  };
+};
 
-  export const semanticNames = {
-    trueGray: 'neutral',
-    blueGray: 'slate',
-    coolGray: 'gray',
-    red: 'error',
-    yellow: 'warning',
-    green: 'success',
-    blue: 'info',
-
-  }
+export const semanticNames = {
+  green: 'brand',
+  yellow: 'links',
+  trueGray: 'neutral',
+  blueGray: 'slate',
+  coolGray: 'gray',
+  red: 'error',
+  amber: 'warning',
+  emerald: 'success',
+  blue: 'info',
+}
 
 const tokenize = (color) => Object.fromEntries(
     Object.entries(color)
@@ -26,16 +27,12 @@ const tokenize = (color) => Object.fromEntries(
   );
   
 
-export default {
-    colors: ({ colors }) => {
-        return ({
-            error: tokenize(colors.red),
-            warning: tokenize(colors.yellow),
-            success: tokenize(colors.green),
-            info: tokenize(colors.blue),
-            gray: tokenize(colors.coolGray),
-            slate: tokenize(colors.blueGray),
-            neutral: tokenize(colors.trueGray)
-        })
-    }
-}
+export default ({ colors }) => ({
+  error: tokenize(colors.red),
+  warning: tokenize(colors.yellow),
+  success: tokenize(colors.green),
+  info: tokenize(colors.blue),
+  gray: tokenize(colors.coolGray),
+  slate: tokenize(colors.blueGray),
+  neutral: tokenize(colors.trueGray)
+})
