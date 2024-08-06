@@ -1,18 +1,19 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
 
-import { Button } from "@/components/Atoms/Button"
 import { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent } from '.';
-import { Input } from "@/components/Atoms/Input"
-import { Label } from "@/components/Atoms/Label"
+
 import {
+  Button,
+  Input,
+  Label,
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/Atoms/Select"
-import { Switch } from "@/components/Atoms/Switch";
+  Switch
+} from "@/components"
 import { BellRing, Check } from 'lucide-react';
 
 const notifications = [
@@ -34,9 +35,9 @@ const meta: Meta<typeof Card> = {
   component: Card,
   parameters: {
     docs: {
-      subtitle: 'Displays a button or a component that looks like a button.',
+      subtitle: 'Displays a card with header, content, and footer.',
       description: {
-        component: '[ShadCn Documentation](https://ui.shadcn.com/docs/components/button)'
+        component: '[ShadCn Documentation](https://ui.shadcn.com/docs/components/card)'
       },
     },
   },

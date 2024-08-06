@@ -52,7 +52,7 @@ const meta: Meta<typeof Table> = {
   component: Table,
   parameters: {
     docs: {
-      subtitle: 'Displays a table or a component that looks like a table.',
+      subtitle: 'A responsive table component.',
       description: {
         component: '[ShadCn Documentation](https://ui.shadcn.com/docs/components/table)'
       },

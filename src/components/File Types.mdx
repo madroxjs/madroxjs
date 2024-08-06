@@ -1,0 +1,131 @@
+import { Source, Meta } from '@storybook/blocks';
+
+<Meta title="Documentation/Folder Structure/Components/File Types" />
+
+## Component Folder Structure
+
+<Source code={`•
+├── component.tsx
+├── index.ts
+├── story.tsx
+├── demo.tsx
+├── docs.mdx
+└── variables.tsx`} />
+
+## Component File Types
+
+### component.tsx
+
+<Source language="tsx" code={`import * as React from "react"
+
+import { cn } from "@/lib/utils"
+
+export interface ComponentProps extends HTMLDivElement {}
+
+const Component = React.forwardRef<HTMLDivElement, ComponentProps>(
+  ({ className, ...props }, ref) => (
+    <div
+        className={cn(
+            "component-level-utility-classes",
+            "state:component-level-override-classes",
+            className
+        )}
+        ref={ref}
+        {...props}
+    />
+    )
+  )
+)
+Component.displayName = "Component"
+
+export { Component }
+`} />
+
+### index.ts
+
+<Source language="ts" code={`export * from './component';`} />
+
+### story.tsx
+
+<Source language="tsx" code={`import type { Meta, StoryObj } from '@storybook/react';
+import { Component } from '.';
+import { ComponentDemo } from './demo'
+
+const meta: Meta<typeof Component> = {
+  component: Component,
+  parameters: {
+    docs: {
+      subtitle: 'Lorem ipsum.',
+      description: {
+        component: '[Documentation Link](https://example.com)'
+      },
+    },
+  },
+  args: { },
+};
+
+export default meta;
+type Story = StoryObj<typeof Component>;
+
+export const Default: Story = {};
+export const Demo: Story = {
+    render: () => <ComponentDemo />
+};
+`} />
+
+
+### demo.tsx
+
+<Source language="tsx" code={`import { Component } from "@/components"
+   
+  export function ComponentDemo() {
+    return (
+      <Component />
+    )
+  }
+  `} />
+
+### docs.mdx
+
+### variables.tsx
+
+<Source language="tsx" code={`import { cva } from "class-variance-authority"
+
+
+const componentVariants = cva(
+    [
+        "default-utility-classes",
+        "hover:default-utility-classes",
+        "active:default-utility-classes"
+    ]
+    {
+      variants: {
+        propName: {
+            variantOption: [
+                "utility-classes",
+                "hover:utility-classes",
+                "active:utility-classes"
+            ]
+        },
+        color: {
+            red: [
+                "text-red-500",
+                "hover:bg-red-500 hover:text-white",
+                "active:bg-red-500/50",
+            ],
+            blue: [
+                "text-blue-500",
+                "hover:bg-blue-500 hover:text-white",
+                "active:bg-blue-500/50",
+            ]
+
+        }
+      },
+      defaultVariants: {
+        propName: "variantOption",
+        color: "red",
+      },
+    }
+  )
+
+export default componentVariants`}/>

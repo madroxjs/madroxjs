@@ -7,9 +7,9 @@ const meta: Meta<typeof Toast> = {
   component: Toast,
   parameters: {
     docs: {
-      subtitle: 'Displays a toast or a component that looks like a toast.',
+      subtitle: 'A succinct message that is displayed temporarily.',
       description: {
-        component: '[ShadCn Documentation](https://ui.shadcn.com/docs/components/toast)'
+        component: '[ShadCn Documentation](https://ui.shadcn.com/docs/components/toast) | [Radix UI Documentation](https://www.radix-ui.com/primitives/docs/components/toast) | [API Reference](https://www.radix-ui.com/primitives/docs/components/toast#api-reference)'
       },
     },
   },

@@ -7,9 +7,9 @@ const meta: Meta<typeof Slider> = {
   component: Slider,
   parameters: {
     docs: {
-      subtitle: 'Displays a slider or a component that looks like a slider.',
+      subtitle: 'An input where the user selects a value from within a given range.',
       description: {
-        component: '[ShadCn Documentation](https://ui.shadcn.com/docs/components/slider)'
+        component: '[ShadCn Documentation](https://ui.shadcn.com/docs/components/slider) | [Radix UI Documentation](https://www.radix-ui.com/primitives/docs/components/slider) | [API Reference](https://www.radix-ui.com/primitives/docs/components/slider#api-reference)'
       },
     },
   },

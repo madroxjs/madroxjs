@@ -7,9 +7,9 @@ const meta: Meta<typeof Switch> = {
   component: Switch,
   parameters: {
     docs: {
-      subtitle: 'Displays a switch or a component that looks like a switch.',
+      subtitle: 'A control that allows the user to toggle between checked and not checked.',
       description: {
-        component: '[ShadCn Documentation](https://ui.shadcn.com/docs/components/switch)'
+        component: '[ShadCn Documentation](https://ui.shadcn.com/docs/components/switch) | [Radix UI Documentation](https://www.radix-ui.com/primitives/docs/components/switch) | [API Reference](https://www.radix-ui.com/primitives/docs/components/switch#api-reference)'
       },
     },
   },

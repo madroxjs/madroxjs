@@ -7,9 +7,9 @@ const meta: Meta<typeof Tabs> = {
   component: Tabs,
   parameters: {
     docs: {
-      subtitle: 'Displays a tabs or a component that looks like a tabs.',
+      subtitle: 'A set of layered sections of content—known as tab panels—that are displayed one at a time.',
       description: {
-        component: '[ShadCn Documentation](https://ui.shadcn.com/docs/components/tabs)'
+        component: '[ShadCn Documentation](https://ui.shadcn.com/docs/components/tabs) | [Radix UI Documentation](https://www.radix-ui.com/primitives/docs/components/tabs) | [API Reference](https://www.radix-ui.com/primitives/docs/components/tabs#api-reference)'
       },
     },
   },

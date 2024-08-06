@@ -1,26 +1,22 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { fn } from '@storybook/test';
 
-import { Sonner } from '.';
+import { Toaster } from '.';
 
-const meta: Meta<typeof Sonner> = {
-  component: Sonner,
+const meta: Meta<typeof Toaster> = {
+  component: Toaster,
   parameters: {
     docs: {
-      subtitle: 'Displays a sonner or a component that looks like a sonner.',
+      subtitle: 'An opinionated toast component for React.',
       description: {
-        component: '[ShadCn Documentation](https://ui.shadcn.com/docs/components/sonner)'
+        component: '[ShadCn Documentation](https://ui.shadcn.com/docs/components/sonner) | [Sonner Documentation](https://sonner.emilkowal.ski/)'
       },
     },
   },
-  args: { onClick: fn() },
+  args: { },
 };
 
 export default meta;
-type Story = StoryObj<typeof Sonner>;
+type Story = StoryObj<typeof Toaster>;
 
 export const Default: Story = {
-  args: {
-    children: 'Sonner',
-  },
 };

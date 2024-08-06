@@ -4,6 +4,7 @@ import { fn } from '@storybook/test';
 import { Button } from '.';
 import { ChevronRight, Loader2, Mail } from 'lucide-react';
 
+
 const meta: Meta<typeof Button> = {
   component: Button,
   parameters: {

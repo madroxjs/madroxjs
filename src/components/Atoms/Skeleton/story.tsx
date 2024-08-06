@@ -7,7 +7,7 @@ const meta: Meta<typeof Skeleton> = {
   component: Skeleton,
   parameters: {
     docs: {
-      subtitle: 'Displays a skeleton or a component that looks like a skeleton.',
+      subtitle: 'Use to show a placeholder while content is loading.',
       description: {
         component: '[ShadCn Documentation](https://ui.shadcn.com/docs/components/skeleton)'
       },

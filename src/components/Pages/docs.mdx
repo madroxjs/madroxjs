@@ -1,0 +1,52 @@
+import { Source, Meta } from '@storybook/blocks';
+
+<Meta title="Documentation/Folder Structure/Pages" />
+
+## Folder Structure - Pages
+
+### Minimum Folder Structure
+
+
+
+<Source code={`•
+└── components
+    └── Pages
+        └── path-segment
+            ├── component.tsx
+            └── index.ts`} />
+
+### Standard Folder Structure
+
+<Source code={`•
+└── components
+    └── Pages
+        └── path-segment
+            ├── component.tsx
+            ├── index.ts
+            └── story.tsx`} />
+
+### Complex Folder Structure
+
+<Source code={`•
+└── components/
+    └── Pages
+        └── path-segment
+            ├── component.tsx
+            ├── demo.tsx
+            ├── index.ts
+            ├── story.ts
+            ├── docs.mdx
+            └── variables.tsx`} />
+
+## Index Folder Structure
+
+<Source code={`•
+└── components/
+    └── Pages
+        └── _index
+            ├── component.tsx
+            ├── demo.tsx
+            ├── index.ts
+            ├── story.ts
+            ├── docs.mdx
+            └── variables.tsx`} />

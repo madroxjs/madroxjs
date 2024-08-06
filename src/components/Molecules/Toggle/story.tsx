@@ -8,9 +8,9 @@ const meta: Meta<typeof Toggle> = {
   component: Toggle,
   parameters: {
     docs: {
-      subtitle: 'Displays a toggle or a component that looks like a toggle.',
+      subtitle: 'A two-state button that can be either on or off.',
       description: {
-        component: '[ShadCn Documentation](https://ui.shadcn.com/docs/components/toggle)'
+        component: '[ShadCn Documentation](https://ui.shadcn.com/docs/components/toggle) | [Radix UI Documentation](https://www.radix-ui.com/primitives/docs/components/toggle) | [API Reference](https://www.radix-ui.com/primitives/docs/components/toggle#api-reference)'
       },
     },
   },

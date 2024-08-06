@@ -7,7 +7,7 @@ const meta: Meta<typeof Textarea> = {
   component: Textarea,
   parameters: {
     docs: {
-      subtitle: 'Displays a textarea or a component that looks like a textarea.',
+      subtitle: 'Displays a form textarea or a component that looks like a textarea.',
       description: {
         component: '[ShadCn Documentation](https://ui.shadcn.com/docs/components/textarea)'
       },

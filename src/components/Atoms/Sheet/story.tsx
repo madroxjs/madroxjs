@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { fn } from '@storybook/test';
 
 import { Sheet } from '.';
 
@@ -7,13 +6,13 @@ const meta: Meta<typeof Sheet> = {
   component: Sheet,
   parameters: {
     docs: {
-      subtitle: 'Displays a sheet or a component that looks like a sheet.',
+      subtitle: 'Extends the Dialog component to display content that complements the main content of the screen.',
       description: {
-        component: '[ShadCn Documentation](https://ui.shadcn.com/docs/components/sheet)'
+        component: '[ShadCn Documentation](https://ui.shadcn.com/docs/components/sheet) | [Radix UI Documentation](https://www.radix-ui.com/primitives/docs/components/sheet) | [API Reference](https://www.radix-ui.com/primitives/docs/components/sheet#api-reference)'
       },
     },
   },
-  args: { onClick: fn() },
+  args: { },
 };
 
 export default meta;
