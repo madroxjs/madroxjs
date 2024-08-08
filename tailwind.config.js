@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-import theme from './tailwind/theme'
+import theme from './src/tailwind/theme'
 
 console.log("theme", theme)
 
