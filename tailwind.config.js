@@ -2,7 +2,7 @@
 
 import theme from './src/tailwind/theme'
 
-console.log("theme", theme)
+console.log(theme.extend.colors)
 
 export default {
   darkMode: ["class"],
@@ -23,6 +23,7 @@ export default {
       },
     },
     extend: {
+      ...theme.extend,
       keyframes: {
         "accordion-down": {
           from: { height: "0" },

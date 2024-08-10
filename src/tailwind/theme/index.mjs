@@ -2,7 +2,7 @@ import accessiblity from "./accessiblity.mjs"
 import animation from "./animation.mjs"
 import backgrounds from "./backgrounds.mjs"
 import borders from './borders'
-import colors from './colors'
+import colorsPrimitive from './colors'
 import effects from './effects'
 import filters from './filters'
 import grid from './grid'
@@ -15,11 +15,14 @@ import tables from './tables'
 import transforms from './transforms'
 import typography from './typography'
 
-import extend from './extend'
+import extendPrimitive from './extend'
+
+const extend = extendPrimitive.default
+const colors = colorsPrimitive.default
 
 export default {
-  extend: extend.default,
-  colors: colors.default,
+  extend,
+  colors,
   ...accessiblity,
   ...animation,
   ...backgrounds,

@@ -1,152 +1,54 @@
-import { Source } from '@storybook/blocks'
+import { Meta, Source } from '@storybook/blocks'
+import component from './backgrounds'
+import componentRaw from './backgrounds?raw'
+import { SourceCode as ExtendedSourceCode, Documentation as ExtendedDocumentation } from './extend/backgrounds.mdx'
 
-<Source language="js" code={`export default {
-  backgroundColor: ({ theme }) => theme('colors'),
-  backgroundImage: {
-    none: 'none',
-    'gradient-to-t': 'linear-gradient(to top, var(--tw-gradient-stops))',
-    'gradient-to-tr': 'linear-gradient(to top right, var(--tw-gradient-stops))',
-    'gradient-to-r': 'linear-gradient(to right, var(--tw-gradient-stops))',
-    'gradient-to-br': 'linear-gradient(to bottom right, var(--tw-gradient-stops))',
-    'gradient-to-b': 'linear-gradient(to bottom, var(--tw-gradient-stops))',
-    'gradient-to-bl': 'linear-gradient(to bottom left, var(--tw-gradient-stops))',
-    'gradient-to-l': 'linear-gradient(to left, var(--tw-gradient-stops))',
-    'gradient-to-tl': 'linear-gradient(to top left, var(--tw-gradient-stops))',
-  },
-  backgroundOpacity: ({ theme }) => theme('opacity'),
-  backgroundPosition: {
-    bottom: 'bottom',
-    center: 'center',
-    left: 'left',
-    'left-bottom': 'left bottom',
-    'left-top': 'left top',
-    right: 'right',
-    'right-bottom': 'right bottom',
-    'right-top': 'right top',
-    top: 'top',
-  },
-  backgroundSize: {
-    auto: 'auto',
-    cover: 'cover',
-    contain: 'contain',
-  },
-  gradientColorStops: ({ theme }) => theme('colors'),
-  gradientColorStopPositions: {
-    '0%': '0%',
-    '5%': '5%',
-    '10%': '10%',
-    '15%': '15%',
-    '20%': '20%',
-    '25%': '25%',
-    '30%': '30%',
-    '35%': '35%',
-    '40%': '40%',
-    '45%': '45%',
-    '50%': '50%',
-    '55%': '55%',
-    '60%': '60%',
-    '65%': '65%',
-    '70%': '70%',
-    '75%': '75%',
-    '80%': '80%',
-    '85%': '85%',
-    '90%': '90%',
-    '95%': '95%',
-    '100%': '100%',
-  },
-}`} />
+<Meta title="Tailwind/Theme/Backgrounds" />
+
+# Backgrounds <small className='text-xs'>[Jump to source](#source-code)</small>
 
 ## [Background Color](https://tailwindcss.com/docs/background-color)
-
-```js
-backgroundColor: ({ theme }) => theme('colors'),
-```
-Sets the background color of an element using theme colors. [MDN Background Color](https://developer.mozilla.org/en-US/docs/Web/CSS/background-color)
+Sets the background color of an element using theme colors. <small>[MDN Background Color](https://developer.mozilla.org/en-US/docs/Web/CSS/background-color)</small>
+<Source language='js' code={`backgroundColor: ${component.backgroundColor}`} />
 
 ## [Background Image](https://tailwindcss.com/docs/background-image)
-
-```js
-backgroundImage: {
-  none: 'none',
-  'gradient-to-t': 'linear-gradient(to top, var(--tw-gradient-stops))',
-  'gradient-to-tr': 'linear-gradient(to top right, var(--tw-gradient-stops))',
-  'gradient-to-r': 'linear-gradient(to right, var(--tw-gradient-stops))',
-  'gradient-to-br': 'linear-gradient(to bottom right, var(--tw-gradient-stops))',
-  'gradient-to-b': 'linear-gradient(to bottom, var(--tw-gradient-stops))',
-  'gradient-to-bl': 'linear-gradient(to bottom left, var(--tw-gradient-stops))',
-  'gradient-to-l': 'linear-gradient(to left, var(--tw-gradient-stops))',
-  'gradient-to-tl': 'linear-gradient(to top left, var(--tw-gradient-stops))',
-},
-```
-Sets the background image of an element, including gradients. [MDN Background Image](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image)
+Sets the background image of an element, including gradients. <small>[MDN Background Image](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image)</small>
+<Source language='js' code={`backgroundImage: ${JSON.stringify(component.backgroundImage, null, 2)}`} />
 
 ## [Background Opacity](https://tailwindcss.com/docs/background-opacity)
-
-```js
-backgroundOpacity: ({ theme }) => theme('opacity'),
-```
-Sets the opacity level for the background color. [MDN Background Opacity](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity)
+Sets the opacity level for the background color. <small>[MDN Background Opacity](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity)</small>
+<Source language='js' code={`backgroundOpacity: ${component.backgroundOpacity}`} />
 
 ## [Background Position](https://tailwindcss.com/docs/background-position)
-
-```js
-backgroundPosition: {
-  bottom: 'bottom',
-  center: 'center',
-  left: 'left',
-  'left-bottom': 'left bottom',
-  'left-top': 'left top',
-  right: 'right',
-  'right-bottom': 'right bottom',
-  'right-top': 'right top',
-  top: 'top',
-},
-```
-Sets the initial position of the background image. [MDN Background Position](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position)
+Sets the initial position of the background image. <small>[MDN Background Position](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position)</small>
+<Source language='js' code={`backgroundPosition: ${JSON.stringify(component.backgroundPosition, null, 2)}`} />
 
 ## [Background Size](https://tailwindcss.com/docs/background-size)
-
-```js
-backgroundSize: {
-  auto: 'auto',
-  cover: 'cover',
-  contain: 'contain',
-},
-```
-Sets the size of the background image. [MDN Background Size](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size)
+Sets the size of the background image. <small>[MDN Background Size](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size)</small>
+<Source language='js' code={`backgroundSize: ${JSON.stringify(component.backgroundSize, null, 2)}`} />
 
 ## [Gradient Color Stops](https://tailwindcss.com/docs/gradient-color-stops)
-
-```js
-gradientColorStops: ({ theme }) => theme('colors'),
-```
-Defines the colors to be used in a gradient. [MDN Color Stops](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/color-stop)
+Defines the colors to be used in a gradient. <small>[MDN Color Stops](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/color-stop)</small>
+<Source language='js' code={`gradientColorStops: ${component.gradientColorStops}`} />
 
 ## [Gradient Color Stop Positions](https://tailwindcss.com/docs/gradient-color-stop-positions)
+Defines the positions for color stops in a gradient. <small>[MDN Gradient Color Stops](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/color-stop)</small>
+<Source language='js' code={`gradientColorStopPositions: ${JSON.stringify(component.gradientColorStopPositions, null, 2)}`} />
 
-```js
-gradientColorStopPositions: {
-  '0%': '0%',
-  '5%': '5%',
-  '10%': '10%',
-  '15%': '15%',
-  '20%': '20%',
-  '25%': '25%',
-  '30%': '30%',
-  '35%': '35%',
-  '40%': '40%',
-  '45%': '45%',
-  '50%': '50%',
-  '55%': '55%',
-  '60%': '60%',
-  '65%': '65%',
-  '70%': '70%',
-  '75%': '75%',
-  '80%': '80%',
-  '85%': '85%',
-  '90%': '90%',
-  '95%': '95%',
-  '100%': '100%',
-},
-```
-Defines the positions for color stops in a gradient. [MDN Gradient Color Stops](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/color-stop)
+{typeof ExtendedDocumentation === 'function' && ExtendedDocumentation().toString() !== '' && (
+  <>
+    <h2>Extended Documentation</h2>
+    <ExtendedDocumentation />
+  </>
+)}
+
+## Source Code
+<Source language="js" code={componentRaw} />
+
+{typeof ExtendedSourceCode === 'function' && ExtendedSourceCode().toString() !== '' && (
+  <>
+    <h3>Extended Source Code</h3>
+    <ExtendedSourceCode />
+  </>
+)}
+
