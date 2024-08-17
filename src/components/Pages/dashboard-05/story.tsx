@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
 
-import { Block } from '.';
+import { DashboardPage5 } from '.';
  
-const meta: Meta<typeof Block> = {
-  component: Block,
+const meta: Meta<typeof DashboardPage5> = {
+  component: DashboardPage5,
   tags: ['!autodocs'],
   parameters: {
     docs: {
@@ -18,9 +18,6 @@ const meta: Meta<typeof Block> = {
 };
  
 export default meta;
-type Story = StoryObj<typeof Block>;
+type Story = StoryObj<typeof DashboardPage5>;
  
-export const Default: Story = {
-  args: {
-  },
-};
+export const Default: Story = {};

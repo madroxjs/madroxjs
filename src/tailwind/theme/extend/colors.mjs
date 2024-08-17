@@ -11,9 +11,9 @@ const desiredShades = {
 export const semanticNames = {
   green: 'brand',
   yellow: 'links',
-  trueGray: 'neutral',
-  blueGray: 'slate',
-  coolGray: 'gray',
+  neutral: 'neutral',
+  slate: 'slate',
+  gray: 'gray',
   red: 'error',
   amber: 'warning',
   emerald: 'success',
@@ -28,11 +28,11 @@ const tokenize = (color) => Object.fromEntries(
   
 
 export default ({ colors }) => ({
-  error: tokenize(colors.red),
-  warning: tokenize(colors.yellow),
-  success: tokenize(colors.green),
-  info: tokenize(colors.blue),
-  gray: tokenize(colors.coolGray),
-  slate: tokenize(colors.blueGray),
-  neutral: tokenize(colors.trueGray)
-})
+    error: tokenize(colors.red),
+    warning: tokenize(colors.yellow),
+    success: tokenize(colors.green),
+    info: tokenize(colors.blue),
+    gray: tokenize(colors.coolGray),
+    slate: tokenize(colors.blueGray),
+    neutral: tokenize(colors.trueGray)
+  })

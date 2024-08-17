@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { Popover, PopoverContent, PopoverTrigger } from '.';
-import { Label } from 'recharts';
+import { Label } from '@/components';
 import { Button } from '../Button';
 import { Input } from '../Input';
 

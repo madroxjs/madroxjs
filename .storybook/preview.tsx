@@ -2,11 +2,20 @@ import React from 'react'
 import type { Preview } from "@storybook/react";
 
 import '../src/styles/globals.css';
+import { ApolloProvider } from '@apollo/client';
+import { client } from '../src/lib/client'
+import { TooltipProvider } from '../src/components/Atoms/Tooltip'
 
 const preview: Preview = {
   tags: ['autodocs'],
   decorators: [
-    (Story) => <div className='w-full flex justify-center align-center'><Story /></div>
+    (Story) => <ApolloProvider client={client}>
+      <TooltipProvider>
+        <div className='w-full flex justify-center align-center'>
+          <Story />
+        </div>
+      </TooltipProvider>
+    </ApolloProvider>
   ],
   parameters: {
     controls: {

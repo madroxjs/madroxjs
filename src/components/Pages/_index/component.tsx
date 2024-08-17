@@ -1,36 +1,40 @@
 import { useEffect } from 'react';
 import { gql, useQuery } from '@apollo/client'
-import { PeopleQueryQuery, PeopleQueryQueryVariables } from '@/generated/graphql';
-
+import { PageComponentType } from '@/lib/types'
 
 const GET_PEOPLE = gql`
-query PeopleQuery {
-  allPeople {
-    people {
-      name
-    }
-  }
-}
+      query Example{
+          getCharacters {
+            mangaName
+            race
+            team
+            mentors
+            students
+            dateOfBirth
+            dateOfDeath
+        }
+      }  
 `;
 
 
 
 // Define the TypeScript interfaces
-  export function IndexPage() {
-    const { loading, error, data } = useQuery<PeopleQueryQuery, PeopleQueryQueryVariables>(GET_PEOPLE);
+  export const IndexPage: PageComponentType = () => {
+    const { loading, error, data } = useQuery(GET_PEOPLE);
   
     useEffect(() => {
       if (loading) return;
       if (error) return;
+      console.log(data)
     }, [loading, error, data]);
   
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error : {error.message}</p>;
     return (
       <>
-        {data?.allPeople?.people?.map((person) => (
-          <p key={person?.name}>{person?.name}</p>
-        ))}
+      got one
       </>
     );
   }
+
+  IndexPage.pathName = "/"
