@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { IndexPage } from '@/components/Pages/_index'
+// import { IndexPage } from '@/components/Pages/_index'
 import { Theme } from '@radix-ui/themes';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './styles/globals.css'
 import {
   createHashRouter,
