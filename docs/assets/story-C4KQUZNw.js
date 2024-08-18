@@ -1,0 +1,1 @@
+import{j as o}from"./jsx-runtime-DBEcOq3S.js";import"./index-DtJulBIN.js";import"./_commonjsHelpers-BosuxZz1.js";const t=()=>o.jsx("div",{children:"Hello"});t.displayName="Atom";const l={component:t,title:"Components/Atoms/Atom"},n={args:{className:"",children:"Hello universe!"}};export{n as Default,l as default};
