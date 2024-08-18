@@ -63,7 +63,7 @@ jobs:
           path: ./docs
 
       - name: Copy Storybook files to docs folder
-        run: cp -r ./docs/* ./dist/docs/
+        run: mv -f ./docs/ ./dist/docs/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
