@@ -1,0 +1,5 @@
+import{j as r}from"./jsx-runtime-DBEcOq3S.js";import{useMDXComponents as e}from"./index-CA_HyBnq.js";import{c as p}from"./colors-DUx78Zkg.js";import{ae as l,ag as c,ah as u}from"./index-CedqTxrV.js";import"./index-DtJulBIN.js";import"./_commonjsHelpers-BosuxZz1.js";import"./iframe-DfedjKFc.js";import"../sb-preview/runtime.js";import"./index-BqTDQIm7.js";import"./index-D-8MO0q_.js";import"./extends-CF3RwP-h.js";import"./_defineProperty-DSxlPr5D.js";import"./_overArg-BZNRQ6_9.js";import"./_baseAssignValue-DD5bxUnJ.js";import"./_getPrototype-By7W0WFf.js";import"./index-CFFTH5x_.js";import"./index-DrFu-skq.js";function m(i){return r.jsxs(r.Fragment,{children:[`
+`,`
+`,`
+`,r.jsx(l,{title:"Tailwind/Theme/Colors/Primitives"}),`
+`,r.jsx(c,{children:Object.entries(p).map(([o,t],n)=>{if(!(typeof t!="object"||o=="default"))return r.jsx(u,{title:o,colors:{50:t[50],100:t[100],200:t[200],300:t[300],400:t[400],500:t[500],600:t[600],700:t[700],800:t[800],900:t[900],950:t[950]}},n)})})]})}function F(i={}){const{wrapper:o}={...e(),...i.components};return o?r.jsx(o,{...i,children:r.jsx(m,{...i})}):m()}export{F as default};
