@@ -15,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/madroxjs/" element={<IndexPage />} />
           {Object.entries(pages).map(([_, Element], key) => {
+            console.log(`/madroxjs${Element.pathName}`)
             return (
               <Route key={key} path={`/madroxjs${Element.pathName}`} element={<Element />} />
             )
