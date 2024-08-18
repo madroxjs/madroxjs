@@ -60,7 +60,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: production-files
-          path: ./storybook-static
+          path: ./dist/docs
 
 
       - name: Deploy to GitHub Pages
