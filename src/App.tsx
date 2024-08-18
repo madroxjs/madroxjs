@@ -11,7 +11,7 @@ import * as pages from './components/Pages'
 
 
 
-const router = createHashRouter(Object.entries(pages).map(([_, Element], key) => ({
+const router = createHashRouter(Object.entries(pages).map(([_, Element]) => ({
   path: Element.pathName,
   element: <Element />,
 })));
