@@ -11,7 +11,8 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 7001",
     "build-storybook": "storybook build",
-    "process": "node .\\_process_folder.mjs"
+    "process": "node .\\_process_folder.mjs",
+    "log": "node ./tailwindLog"
   },
   "dependencies": {
     "@apollo/client": "^3.11.1",
@@ -87,7 +88,7 @@
     "@typescript-eslint/eslint-plugin": "^7.15.0",
     "@typescript-eslint/parser": "^7.15.0",
     "@vitejs/plugin-react": "^4.3.1",
-    "autoprefixer": "^10.4.19",
+    "autoprefixer": "^10.4.20",
     "chromatic": "^11.7.0",
     "cucumber": "^6.0.7",
     "eslint": "^8.57.0",
@@ -96,10 +97,10 @@
     "eslint-plugin-storybook": "^0.8.0",
     "jest": "^29.7.0",
     "jest-cucumber": "^4.5.0",
-    "postcss": "^8.4.39",
+    "postcss": "^8.4.41",
     "react-syntax-highlighter": "^15.5.0",
     "storybook": "^8.2.8",
-    "tailwindcss": "^3.4.6",
+    "tailwindcss": "^3.4.10",
     "ts-jest": "^29.2.4",
     "typescript": "^5.2.2",
     "vite": "^5.3.4"

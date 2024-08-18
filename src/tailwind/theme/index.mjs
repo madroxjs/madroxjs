@@ -35,8 +35,6 @@ const tables = tablesPrimitive.default
 const transforms = transformsPrimitive.default
 const typography = typographyPrimitive.default
 
-console.log(extend)
-
 export default {
   extend,
   colors,
