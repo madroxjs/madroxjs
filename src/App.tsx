@@ -13,10 +13,10 @@ function App() {
     <Theme className='flex justify-center align-center' accentColor="crimson" grayColor="sand" radius="large" scaling="95%" style={{width: '100vw'}}>
       <Router>
         <Routes>
-          <Route path="/" element={<IndexPage />} />
+          <Route path="/madroxjs/" element={<IndexPage />} />
           {Object.entries(pages).map(([_, Element], key) => {
             return (
-              <Route key={key} path={`${Element.pathName}`} element={<Element />} />
+              <Route key={key} path={`/madroxjs${Element.pathName}`} element={<Element />} />
             )
           })}
         </Routes>
