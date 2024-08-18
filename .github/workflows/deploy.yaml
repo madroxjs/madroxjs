@@ -59,7 +59,7 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
-          name: production-files
+          name: production-storybook
           path: ./docs
 
       - name: Copy Storybook files to docs folder
