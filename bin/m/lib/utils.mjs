@@ -43,10 +43,6 @@ const overrideConsole = (method) => {
 ['log', 'error', 'info', 'warn'].forEach(method => overrideConsole(method));
 
 
-export const createFromTemplate = (type, componentName) => {
-    return ``
-}
-
 // export const md = (strings, ...values) => {
 //     let markdown;
     
