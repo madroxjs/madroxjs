@@ -1,8 +1,27 @@
 import { marked } from 'marked';
 import TerminalRenderer from 'marked-terminal';
 import chalk from 'chalk'
+import { dirname, join } from 'path';
+import { existsSync } from 'fs';
+import { fileURLToPath } from 'url';
+import path from 'node:path';
 
 export const colors = chalk
+export const __filename = fileURLToPath(import.meta.url);
+export const __dirname = path.dirname(__filename);
+export const __projectroot = findGitRoot()
+
+
+export function findGitRoot(dir = __dirname) {
+    if (existsSync(join(dir, '.git'))) {
+        return dir;
+    }
+    const parentDir = dirname(dir);
+    if (parentDir === dir) {
+        throw new Error('No .git directory found');
+    }
+    return findGitRoot(parentDir);
+}
 
 
 marked.setOptions({
@@ -23,7 +42,10 @@ const overrideConsole = (method) => {
 
 ['log', 'error', 'info', 'warn'].forEach(method => overrideConsole(method));
 
-  
+
+export const createFromTemplate = (type, componentName) => {
+    return ``
+}
 
 // export const md = (strings, ...values) => {
 //     let markdown;

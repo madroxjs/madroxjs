@@ -79,7 +79,7 @@ const chartConfig = {
   },
 } satisfies ChartConfig
 
-import db from '@/lib/db.json'
+import db from '@/lib/localData/charts.json'
 
 const imageOrChart = (row: DataVizItemType) => {
   switch (row.title) {

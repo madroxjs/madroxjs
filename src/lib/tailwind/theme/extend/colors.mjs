@@ -22,7 +22,7 @@ export default ({ colors }) => ({
     brand: tokenize(colors.emerald),
     links: tokenize(colors.amber),
     info: tokenize(colors.blue),
-    gray: tokenize(colors.coolGray),
-    slate: tokenize(colors.blueGray),
-    neutral: tokenize(colors.trueGray)
+    gray: tokenize(colors.gray),
+    slate: tokenize(colors.slate),
+    neutral: tokenize(colors.neutral)
   })
