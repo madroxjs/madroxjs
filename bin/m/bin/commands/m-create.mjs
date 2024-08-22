@@ -1,10 +1,11 @@
 import { Command } from 'commander';
 // import { colors } from '../../lib/utils.mjs';
-import { __projectroot } from '../../lib/utils.mjs'
+import { __projectroot, colors } from '../../lib/utils.mjs'
 import { join } from 'path';
 import fs from 'fs-extra';
 import * as changeCase from "change-case";
 import { componentTemplate, indexTemplate, variantsTemplate, storyTemplate } from '../../templates/components/index.mjs'
+import { log } from 'console'
 
 const program = new Command();
 
@@ -49,7 +50,7 @@ export async function createCommand(type, nameOfThing) {
         ['variants.tsx', variantsTemplate(nameOfThing)]
     ].forEach(async ([fileName, fileContents]) => {
         await fs.writeFile(join(targetPath, fileName), fileContents, 'utf-8')
-        console.log(`${fileName} created!`)
+        log(colors.blue(`<${changeCase.pascalCase(nameOfThing)} /> -->`), colors.yellow(fileName), colors.green(`created!`))
     })
 
 }

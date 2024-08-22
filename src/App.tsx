@@ -8,7 +8,7 @@ import {
   RouterProvider
 } from 'react-router-dom';
 import * as pages from './components/Pages'
-
+import Test from './test.mdx'
 
 
 const router = createHashRouter(Object.entries(pages).map(([_, Element]) => ({
@@ -34,6 +34,12 @@ function App() {
           })}
         </Routes>
       </Router> */}
+
+      <h1>Hi there</h1>
+      <br />
+      <Test />
+      <br />
+
       <RouterProvider router={router} />
 
     </Theme>
