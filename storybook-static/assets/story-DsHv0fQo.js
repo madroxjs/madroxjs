@@ -1,0 +1,6 @@
+import{j as o}from"./jsx-runtime-DBEcOq3S.js";import{f as t}from"./index-CERzeK2C.js";import{a as e}from"./component-DOfoJcFx.js";import{c as i}from"./createLucideIcon-uFt_cLfz.js";import"./index-DtJulBIN.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-DZLKizrv.js";import"./index-CE5k4Bb4.js";import"./index-D56hIVKb.js";import"./index-kfRDelSZ.js";import"./index-BqTDQIm7.js";import"./index-CtLtbpqE.js";import"./index-Bb4qSo10.js";import"./utils-B06rK7pa.js";/**
+ * @license lucide-react v0.414.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const r=i("Bold",[["path",{d:"M6 12h9a4 4 0 0 1 0 8H7a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h7a4 4 0 0 1 0 8",key:"mg9rjx"}]]),b={component:e,parameters:{docs:{subtitle:"A two-state button that can be either on or off.",description:{component:"[ShadCn Documentation](https://ui.shadcn.com/docs/components/toggle) | [Radix UI Documentation](https://www.radix-ui.com/primitives/docs/components/toggle) | [API Reference](https://www.radix-ui.com/primitives/docs/components/toggle#api-reference)"}}},args:{onClick:t()}},j={args:{"aria-label":"Toggle Bold",children:o.jsx(r,{className:"h-4 w-4"})}};export{j as Default,b as default};

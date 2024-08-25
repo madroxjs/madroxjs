@@ -214,4 +214,4 @@ export const DashboardPage4: PageComponentType = () => {
   )
 }
 
-DashboardPage4.pathName = "/dashboard-04"
+DashboardPage4.path = "dashboard-04"

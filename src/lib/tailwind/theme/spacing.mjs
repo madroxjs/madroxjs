@@ -1,6 +1,12 @@
-/** @type {import('tailwindcss').Config} */
-
 export default {
+    margin: ({ theme }) => ({
+        auto: 'auto',
+        ...theme('spacing'),
+    }),
+    padding: ({ theme }) => theme('spacing'),
+    space: ({ theme }) => ({
+        ...theme('spacing'),
+    }),
     spacing: {
         px: '1px',
         0: '0px',

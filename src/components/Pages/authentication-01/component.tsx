@@ -39,4 +39,4 @@ export const LoginForm1: PageComponentType = () =>  {
   )
 }
 
-LoginForm1.pathName = "/authentication-01"
+LoginForm1.path = "authentication-01"

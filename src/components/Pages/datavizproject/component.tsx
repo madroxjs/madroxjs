@@ -238,7 +238,7 @@ export const DataVizProjectPage: PageComponentType = () => (
 )
 
 
-DataVizProjectPage.pathName = "/datavizproject"
+DataVizProjectPage.path = "datavizproject"
 
 
 const DonutChart = () => (

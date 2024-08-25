@@ -37,4 +37,4 @@ const GET_PEOPLE = gql`
     );
   }
 
-  IndexPage.pathName = "/"
+  IndexPage.path = "/"

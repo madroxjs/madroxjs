@@ -883,4 +883,4 @@ export const ChartsPage1: PageComponentType = () => {
   )
 }
 
-ChartsPage1.pathName = "/charts-01"
+ChartsPage1.path = "charts-01"

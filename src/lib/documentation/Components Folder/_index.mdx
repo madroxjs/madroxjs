@@ -1,0 +1,118 @@
+import { Source, Meta } from '@storybook/blocks';
+
+# Components Glossary
+
+<Meta title="Documentation/Components Folder" />
+
+## Atomic Design
+
+### General Relativity in Atomic Design
+<small>Source - [Atomic Design Chapter 2: Atomic Design Methodology](https://atomicdesign.bradfrost.com/chapter-2/)</small>
+
+In the "general relativity" framework of atomic design, as popularized by Brad Frost, the definitions and roles are universally agreed upon:
+
+* **Atoms**: Fundamental, stateless building blocks like buttons, inputs, and labels. They are the simplest UI components, purely presentational, and at their most fundamental are made up of HTMLElements.
+* **Molecules**: Combinations of atoms that form more complex components. Molecules manage local state or contain subcomponents, allowing for interactive and functional UI elements like a form group with an input and label.
+* **Organisms**: More complex structures composed of groups of molecules and atoms, such as a header or a user profile section. Organisms might manage more extensive local state and interactions.
+* **Templates**: Page-level layouts that combine organisms to create page structures without specific content. They define the layout and structure.
+* **Pages**: Templates filled with actual content, delivering the final product. Pages are the highest level in this hierarchy, representing fully realized web pages.
+
+### Special Relativity in Atomic Design
+In the "special relativity" framework, atomic design is tailored to the needs and architecture of a specific design library. Here, molecules manage local state or have subcomponents, making them key players in managing interactions and functionality:
+
+* **Atoms**: Defined as stateless, fundamental building blocks specific to the design library. They are the components all other components are built off of.
+* **Molecules**: Components that manage local state or have subcomponents outside of the atoms. They are versatile and complex, handling specific interactions and state requirements within the design library. Examples include a dropdown menu or a form field with validation.
+* **Organisms**: Complex components that may leverage GraphQL (or a similar state management system) to manage and pass down state. They combine molecules and atoms to form sophisticated structures within the design library, such as a dashboard or a navigation bar.
+* **Templates and Pages**: In this special relativity framework, templates and pages share their definition with the general case.
+
+## Composite or Compound Components
+<small>Source - [Smashing Magazine: Compound Components In React](https://www.smashingmagazine.com/2021/08/compound-components-react/)</small>
+
+Composite or compound components in React refer to a design pattern where multiple related components work together to form a cohesive, higher-level interface. These components are often used to manage state and share context, allowing for more flexible and reusable code. This pattern is beneficial in complex UIs where different parts of the component need to be aware of each other’s state.
+
+### Benefits:
+- **Reusability**: By breaking down a UI into smaller, interrelated components, you can reuse these components across different parts of your application.
+- **Flexibility**: Compound components allow for greater flexibility in how UI components are composed, making it easier to manage complex interactions.
+- **Maintainability**: This pattern leads to cleaner and more maintainable code, as the logic for how components interact is encapsulated within the compound component itself.
+
+### Examples:
+- **Select/Dropdown Components**: A `Select` component might contain multiple `Option` components, with the `Select` managing the overall state and the `Option` components rendering each selectable item.
+- **Tabs Component**: A `Tabs` component with `Tab` and `TabPanel` subcomponents that work together to display tabbed content.
+
+## React 
+
+### Class to Functional Components
+<small>Source - [Separating Business Logic from UI Components in React 18](https://bootcamp.uxdesign.cc/separating-%EF%B8%8F-business-logic-from-ui-components-in-react-18-aa1775b3caba)</small>
+
+The transition from class components to functional components in React has been largely driven by the introduction of Hooks in React 16.8. Hooks allow you to use state and other React features without writing a class. This shift has simplified React development and made it more intuitive.
+
+### Key Differences:
+- **State Management**: In class components, state is managed through `this.state` and `setState()`. In functional components, the `useState` Hook is used for state management.
+- **Lifecycle Methods**: Class components use lifecycle methods like `componentDidMount` and `componentWillUnmount`. Functional components use the `useEffect` Hook to manage side effects, effectively replacing lifecycle methods.
+- **Code Readability**: Functional components tend to be more concise and easier to read, as they eliminate the need for boilerplate code like `this` bindings.
+
+### Composition
+<small>Source - [React Documentation](https://reactjs.org/docs/composition-vs-inheritance.html)</small>
+
+Composition is the recommended way to build React components. It allows components to be nested within each other, enabling the creation of complex UIs from simple building blocks. This pattern encourages code reuse and modular design.
+
+### Hooks
+<small>Source - [React Documentation](https://reactjs.org/docs/hooks-intro.html)</small>
+
+Hooks are functions that let you “hook into” React state and lifecycle features from functional components. They simplify the use of state and other React features, leading to more manageable and understandable code.
+
+### Popular Hooks:
+- **useState**: Manages state in a functional component.
+- **useEffect**: Manages side effects like fetching data, directly replacing lifecycle methods.
+- **useContext**: Accesses context values without using `contextType` or `Context.Consumer`.
+
+## Micro Frontends
+<small>Source - [Micro Frontend: A Microservice Approach to Developing Web UIs](https://www.altexsoft.com/blog/micro-frontend/)</small>
+
+Micro frontends are an architectural style where a frontend application is decomposed into individual, semi-independent “micro” apps that work together to create the overall user interface. This approach brings the benefits of microservices to frontend development, enabling teams to work independently on different parts of an application.
+
+### Benefits:
+- **Independence**: Different teams can develop, deploy, and maintain their own micro frontends independently.
+- **Scalability**: Allows large applications to be more easily scaled, as each micro frontend can be optimized and scaled separately.
+- **Resilience**: The failure of one micro frontend doesn’t necessarily bring down the entire application, improving overall system resilience.
+
+### Challenges:
+- **Integration**: Integrating multiple micro frontends into a seamless user experience can be challenging.
+- **Communication**: Ensuring smooth communication and shared state between micro frontends requires careful planning and implementation.
+
+## Component Library
+<small>Source - [Building a Component Library – A Step-by-Step Guide](https://www.uxpin.com/studio/blog/building-component-library-guide/)</small>
+
+A component library is a collection of reusable UI components that can be shared across multiple projects. This approach promotes consistency, reduces development time, and makes it easier to maintain a cohesive design language across an application or suite of applications.
+
+### Steps to Build a Component Library:
+1. **Define Your Needs**: Determine the scope of your component library and what components need to be included.
+2. **Design Components**: Work closely with designers to ensure that components meet design guidelines and are visually consistent.
+3. **Develop Components**: Implement components using best practices, ensuring they are flexible and easy to use in various contexts.
+4. **Document Components**: Provide clear documentation for each component, including usage examples and API details.
+5. **Distribute Components**: Make the component library available through a package manager or private repository.
+
+### Benefits:
+- **Consistency**: Ensures a consistent look and feel across different parts of an application.
+- **Efficiency**: Speeds up development by providing pre-built components.
+- **Maintainability**: Centralized updates to the component library propagate across all projects using it, simplifying maintenance.
+
+## Storybook Driven Development
+<small>Source - [Storybook Driven Development](https://medium.com/nulogy/storybook-driven-development-a3c517276c07)</small>
+
+Storybook Driven Development (SBDD) is a development approach where components are developed and tested in isolation using Storybook. This approach allows developers to focus on individual components, ensuring they are well-documented and thoroughly tested before being integrated into the broader application.
+
+### Advantages of SBDD:
+- **Isolation**: Components are developed in isolation, reducing the complexity and making it easier to focus on individual component functionality.
+- **Documentation**: Storybook provides built-in documentation, ensuring that all components are well-documented and easy to understand.
+- **Testing**: With SBDD, you can test components thoroughly in Storybook before integrating them into the application, reducing the likelihood of bugs.
+
+## Component Driven Design
+<small>Source - [What is Component Driven Development?](https://medium.com/@arqex/what-is-component-driven-development-and-why-to-use-it-e3e57abbc449)</small>
+
+Component Driven Development (CDD) is an approach to UI development where the focus is on building and testing components first, before integrating them into screens or applications. This methodology ensures that components are reusable, scalable, and maintainable.
+
+### Process:
+1. **Component Design**: Start by designing and developing the smallest components first (atoms) and gradually compose them into larger units (molecules, organisms).
+2. **Component Testing**: Test each component independently to ensure it behaves as expected.
+3. **Integration**: Once components are verified, they can be integrated into

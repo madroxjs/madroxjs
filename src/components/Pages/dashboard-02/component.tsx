@@ -245,4 +245,4 @@ export const DashboardPage2: PageComponentType = () => {
   )
 }
 
-DashboardPage2.pathName = "/dashboard-02"
+DashboardPage2.path = "dashboard-02"

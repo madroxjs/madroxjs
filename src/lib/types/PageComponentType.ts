@@ -8,6 +8,6 @@ export type PageComponentType = React.FC & {
   (): ReactElement;
 
   /** The path name associated with the route for this page component. */
-  pathName: string;
+  path?: string;
 };
 

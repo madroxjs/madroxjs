@@ -1,12 +1,12 @@
 import type { StorybookConfig } from "@storybook/react-vite";
 import { mergeConfig } from 'vite';
+import react from '@vitejs/plugin-react'
 
 const config: StorybookConfig = {
-  stories: ["../src/lib/**/*.mdx", "../src/**/story.@(js|jsx|mjs|ts|tsx)"], // Default
+  stories: ["../src/**/*.mdx", "../src/**/story.@(js|jsx|mjs|ts|tsx)"], // Default
   // stories: ["../src/components/Atoms/Atom/story.@(js|jsx|mjs|ts|tsx)"], // For screenshots
   // stories: ["../src/documentation/**/*.mdx", "../src/components/Atoms/Atom/story.@(js|jsx|mjs|ts|tsx)"], //Documentation
   addons: [
-    "@storybook/addon-onboarding",
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@chromatic-com/storybook",
@@ -18,6 +18,7 @@ const config: StorybookConfig = {
     options: {},
   },
   async viteFinal(config) {
+    // config.plugins = []
     return mergeConfig(config, {
       css: {
         postcss: {

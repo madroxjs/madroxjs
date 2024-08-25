@@ -717,4 +717,4 @@ export const DashboardPage5: PageComponentType = () => {
   )
 }
 
-DashboardPage5.pathName = "/dashboard-05"
+DashboardPage5.path = "dashboard-05"
