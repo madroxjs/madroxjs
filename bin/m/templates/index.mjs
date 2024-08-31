@@ -48,6 +48,7 @@ import { ${componentNameTitleCase} } from '.';
 
 const meta: Meta<typeof ${componentNameTitleCase}> = {
   component: ${componentNameTitleCase},
+  tags: ["autodoc"]
 };
 
 export default meta;

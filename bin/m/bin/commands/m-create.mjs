@@ -4,7 +4,7 @@ import { __projectroot, colors } from '../../lib/utils.mjs'
 import { join } from 'path';
 import fs from 'fs-extra';
 import * as changeCase from "change-case";
-import { componentTemplate, indexTemplate, variantsTemplate, storyTemplate } from '../../templates/components/index.mjs'
+import { componentTemplate, indexTemplate, variantsTemplate, storyTemplate } from '../../templates/index.mjs'
 import { log } from 'console'
 
 const program = new Command();
@@ -21,26 +21,29 @@ export default program;
 
 export async function createCommand(type, nameOfThing) {
 
-    let typeFolder;
-    switch (type) {
+    let typeFolder = type.split('/');
+    switch (typeFolder[0]) {
         case "atom":
-            typeFolder = "Atoms"
+            typeFolder[0] = "Atoms"
             break;
         case "molecule":
-            typeFolder = "Molecules"
+            typeFolder[0] = "Molecules"
             break;
         case "organism":
-            typeFolder = "Organisms"
+            typeFolder[0] = "Organisms"
             break;
         case "template":
-            typeFolder = "Templates"
+            typeFolder[0] = "Templates"
             break;
         case "page":
-            typeFolder = "Pages"
+            typeFolder[0] = "Pages"
+            break;
+        default:
+            typeFolder[0] = changeCase.pascalCase(typeFolder[0])
             break;
     }
 
-    const targetPath = join(__projectroot, 'src', 'components', typeFolder, changeCase.pascalCase(nameOfThing))
+    const targetPath = join(__projectroot, 'src', 'components', ...typeFolder, changeCase.pascalCase(nameOfThing))
     await fs.ensureDir(targetPath)
 
     ;[

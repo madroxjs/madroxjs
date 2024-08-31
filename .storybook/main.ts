@@ -17,6 +17,14 @@ const config: StorybookConfig = {
     name: "@storybook/react-vite",
     options: {},
   },
+  core: {
+    builder: {
+      name: '@storybook/builder-vite',
+      options: {
+        viteConfigPath: '.storybook/vite.config.ts'
+      },
+    },
+  },
   async viteFinal(config) {
     // config.plugins = []
     return mergeConfig(config, {
