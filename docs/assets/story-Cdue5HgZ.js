@@ -1,0 +1,1 @@
+import{D as t}from"./variants-C7PkYu7E.js";import"./jsx-runtime-DBEcOq3S.js";import"./index-DtJulBIN.js";import"./_commonjsHelpers-BosuxZz1.js";import"./utils-B06rK7pa.js";import"./index-Bb4qSo10.js";const p={title:"Third Party/Animata/Button/DuolingoButton",component:t,tags:["autodoc"]},u={args:{children:"Foobar"}};export{u as Default,p as default};

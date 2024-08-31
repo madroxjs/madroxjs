@@ -1,0 +1,1 @@
+import{S as t}from"./component-Xcv-oUxQ.js";import"./jsx-runtime-DBEcOq3S.js";import"./index-DtJulBIN.js";import"./_commonjsHelpers-BosuxZz1.js";import"./utils-B06rK7pa.js";import"./motion-nEuxSAi1.js";import"./createLucideIcon-uFt_cLfz.js";const u={title:"Third Party/Animata/Button/StatusButton",component:t,tags:["autodoc"]},s={};export{s as Default,u as default};

@@ -1,0 +1,1 @@
+import{E as t}from"./variants-DtTaLB0m.js";import"./jsx-runtime-DBEcOq3S.js";import"./index-DtJulBIN.js";import"./_commonjsHelpers-BosuxZz1.js";import"./utils-B06rK7pa.js";import"./index-Bb4qSo10.js";const e={title:"Third Party/Animata/Button/ExternalLinkButton",component:t,tags:["autodoc"]},p={args:{children:"Foobar"}};export{p as Default,e as default};
