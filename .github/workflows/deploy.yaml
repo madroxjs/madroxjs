@@ -64,6 +64,10 @@ jobs:
         with:
           name: production-storybook
           path: ./build-storybook
+      
+      - name: Create docs folder
+        run: mkdir ./dist/docs/
+
 
       - name: Copy Storybook files to docs folder
         run: mv ./build-storybook/* ./dist/docs/
