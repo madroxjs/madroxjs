@@ -1,6 +1,0 @@
-import{j as t}from"./jsx-runtime-DBEcOq3S.js";import{useMDXComponents as n}from"./index-CA_HyBnq.js";import{ae as m}from"./index-Dy4-7q8M.js";import"./index-DtJulBIN.js";import"./_commonjsHelpers-BosuxZz1.js";import"./iframe-afcKKGwg.js";import"../sb-preview/runtime.js";import"./index-BqTDQIm7.js";import"./index-D-8MO0q_.js";import"./extends-CF3RwP-h.js";import"./_defineProperty-DSxlPr5D.js";import"./_overArg-BZNRQ6_9.js";import"./_baseAssignValue-DD5bxUnJ.js";import"./_getPrototype-By7W0WFf.js";import"./index-CFFTH5x_.js";import"./index-DrFu-skq.js";const D=({src:e})=>{const o={img:"img",...n()};return t.jsx(o.img,{src:e})};function r(e){const o={code:"code",h1:"h1",p:"p",pre:"pre",...n(),...e.components};return t.jsxs(t.Fragment,{children:[t.jsx(m,{title:"Documentation/How To Create/Atoms/With CLI"}),`
-`,`
-`,t.jsx(o.h1,{id:"create-an-atom-with-the-cli",children:"Create an Atom With The CLI"}),`
-`,t.jsx(o.p,{children:"Run the following withing the madroxjs project:"}),`
-`,t.jsx(o.pre,{children:t.jsx(o.code,{className:"language-bash",children:`npx m create atom TestComponent
-`})})]})}function I(e={}){const{wrapper:o}={...n(),...e.components};return o?t.jsx(o,{...e,children:t.jsx(r,{...e})}):r(e)}export{D as Image,I as default};

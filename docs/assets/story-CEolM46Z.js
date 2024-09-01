@@ -1,1 +1,0 @@
-import{A as t}from"./variants-BKszCeUd.js";import"./jsx-runtime-DBEcOq3S.js";import"./index-DtJulBIN.js";import"./_commonjsHelpers-BosuxZz1.js";import"./utils-B06rK7pa.js";import"./index-Bb4qSo10.js";const e={title:"Third Party/Animata/Button/AlgoliaBlueButton",component:t,tags:["autodoc"]},n={args:{children:"Foobar"}};export{n as Default,e as default};
