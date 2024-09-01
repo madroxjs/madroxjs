@@ -18,7 +18,7 @@ export default {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[contenthash].js',
-    publicPath: '/',
+    publicPath: '/madroxjs/',
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
