@@ -23,6 +23,10 @@ const keyframes = {
         "bg-position": {
             "0%": { backgroundPosition: "0% 50%" },
             "100%": { backgroundPosition: "100% 50%" },
+          },
+          "shine": {
+            from: { backgroundPosition: '200% 0' },
+            to: { backgroundPosition: '-200% 0' },
           },  
     }
 }
@@ -34,6 +38,7 @@ const animations = {
     animata: {
         "meteor": "meteor var(--duration) var(--delay) ease-in-out infinite",
         "pop-blob": "pop-blob 5s infinite",
+        "shine": "shine 8s ease-in-out infinite",
     }
 }
 

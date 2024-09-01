@@ -93,3 +93,16 @@ export const AsChild: Story = {
     children: <a href="#">Button</a>
   }
 }
+
+// expandIcon
+// ringHover
+export const Shine: Story = {
+  args: {
+    variant: "shine",
+    children: "Shine"
+  }
+}
+// gooeyRight
+// gooeyLeft
+// linkHover1
+// linkHover2

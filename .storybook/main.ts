@@ -1,55 +1,101 @@
-import type { StorybookConfig } from "@storybook/react-vite";
-import { mergeConfig } from 'vite';
-import react from '@vitejs/plugin-react'
+import type { StorybookConfig } from '@storybook/react-webpack5';
+import { debug } from 'console';
+import path from 'path';
 
 const config: StorybookConfig = {
-  stories: ["../src/**/*.mdx", "../src/**/story.@(js|jsx|mjs|ts|tsx)"], // Default
-  // stories: ["../src/components/Atoms/Atom/story.@(js|jsx|mjs|ts|tsx)"], // For screenshots
-  // stories: ["../src/documentation/**/*.mdx", "../src/components/Atoms/Atom/story.@(js|jsx|mjs|ts|tsx)"], //Documentation
+  stories: ["../src/**/*.mdx", "../src/**/story.@(js|jsx|mjs|ts|tsx)"],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@chromatic-com/storybook",
     "@storybook/addon-interactions",
-    '@storybook/addon-a11y',
+    "@storybook/addon-a11y",
+    {
+      name: '@storybook/addon-styling-webpack',
+      options: {
+        rules: [
+          {
+            test: /\.css$/,
+            sideEffects: true,
+            use: [
+              require.resolve('style-loader'),
+              {
+                loader: require.resolve('css-loader'),
+                options: {
+                  importLoaders: 1,
+                },
+              },
+              {
+                loader: require.resolve('postcss-loader'),
+                options: {
+                  implementation: require.resolve('postcss'),
+                },
+              },
+            ],
+          },
+        ],
+      },
+    },
+
   ],
   framework: {
-    name: "@storybook/react-vite",
+    name: "@storybook/react-webpack5",
     options: {},
   },
   core: {
-    builder: {
-      name: '@storybook/builder-vite',
-      options: {
-        viteConfigPath: '.storybook/vite.config.ts'
-      },
-    },
+    builder: "@storybook/builder-webpack5",
   },
-  async viteFinal(config) {
-    // config.plugins = []
-    return mergeConfig(config, {
-      css: {
-        postcss: {
-          plugins: [
-            require('tailwindcss'),
-            require('autoprefixer'),
-          ],
-        },
+  webpackFinal: async (config) => {
+    // Resolve aliases
+    config.resolve = {
+      ...config.resolve,
+      alias: {
+        '@': path.resolve(__dirname, '../src'),
       },
+    };
+
+    // Add TypeScript support
+    config.module?.rules?.push({
+      test: /\.(ts|tsx)$/,
+      use: [
+        {
+          loader: require.resolve('ts-loader'),
+        },
+      ],
     });
+
+    // // Add support for JSX/JS files
+    config.module?.rules?.push({
+      test: /\.(js|jsx)$/,
+      use: [
+        {
+          loader: require.resolve('babel-loader'),
+          options: {
+            presets: [
+              require.resolve('@babel/preset-env'),
+              require.resolve('@babel/preset-react'),
+              require.resolve('@babel/preset-typescript'),
+            ],
+          },
+        },
+      ],
+      exclude: /node_modules/,
+    });
+
+
+    return config;
   },
   typescript: {
     check: false,
-    reactDocgen: 'react-docgen-typescript',
+    reactDocgen: "react-docgen-typescript",
     reactDocgenTypescriptOptions: {
       shouldExtractLiteralValuesFromEnum: true,
       propFilter: (prop) => {
         if (prop.parent) {
-          // Include props from @radix-ui and exclude other node_modules
           return (
-            /@radix-ui/.test(prop.parent.fileName) 
-            || !/node_modules/.test(prop.parent.fileName)
-            || /cmdk/.test(prop.parent.fileName) 
+            /@radix-ui/.test(prop.parent.fileName) ||
+            !/node_modules/.test(prop.parent.fileName) ||
+            /cmdk/.test(prop.parent.fileName)
           );
         }
         return true;
@@ -57,4 +103,5 @@ const config: StorybookConfig = {
     },
   },
 };
+
 export default config;

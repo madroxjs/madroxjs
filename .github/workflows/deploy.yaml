@@ -50,6 +50,9 @@ jobs:
 
 
     steps:
+      - name: Checkout repo (to access .git)
+        uses: actions/checkout@v4
+
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
@@ -60,10 +63,10 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: production-storybook
-          path: ./docs
+          path: ./build-storybook
 
       - name: Copy Storybook files to docs folder
-        run: mv -f ./docs/ ./dist/docs/
+        run: mv ./build-storybook/* ./dist/docs/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

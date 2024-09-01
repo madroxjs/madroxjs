@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
+import App from './App'
 import './index.css'
 import { ApolloProvider } from '@apollo/client';
 import { client } from '@/lib/client'
