@@ -18,7 +18,7 @@ Madrox gives you the power to leverage well-established libraries, but with addi
 
 Madrox can be easily integrated into your project:
 
-```bash
+```
 npm install @madroxjs/madroxjs
 ```
 
@@ -26,7 +26,7 @@ npm install @madroxjs/madroxjs
 
 Madrox extends components from popular libraries like **ShadCN/UI** and **Animata**, providing additional variants, flexibility, and customization options. This means you get pre-built components from trusted libraries, but with added enhancements tailored to your specific needs.
 
-```tsx
+```
 import { Button } from "@madroxjs/madroxjs";
 
 export const MyCustomButton = () => <Button variant="primary">Click Me!</Button>;
@@ -36,7 +36,7 @@ export const MyCustomButton = () => <Button variant="primary">Click Me!</Button>
 
 Madrox relies on **TailwindCSS** for styling and **Framer Motion** for animations, so all components are **highly customizable** and **performant**:
 
-```tsx
+```
 <Button size="large" motionProps={{ initial: { opacity: 0 }, animate: { opacity: 1 } }}>
   Hover me!
 </Button>
@@ -56,7 +56,7 @@ Madrox adds new variants and extensions to components, such as **Buttons**, **Mo
 
 With Madrox, you can quickly generate your own components using the built-in CLI:
 
-```bash
+```
 npx m create component MyNewComponent
 ```
 
