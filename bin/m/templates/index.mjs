@@ -79,6 +79,17 @@ export const ${componentNameCamelCase}Variants = cva(
 export default ${componentNameCamelCase}Variants`
 }
 
+export const documentationTemplate = (componentName, options) => {
+  if(options.docs) {
+    options
+  }
+
+
+  return (`
+    ${componentName}
+  `)
+}
+
 export const atomTemplate = (componentName) => componentTemplate(componentName)
 export const moleculeTemplate = (componentName) => componentTemplate(componentName)
 export const organismTemplate = (componentName) => componentTemplate(componentName)

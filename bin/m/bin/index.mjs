@@ -9,6 +9,8 @@ program
     .version('0.8.0')
     .executableDir('./commands')
 
-program.command('create', 'Creates something for the current M-Prime project.')
+program
+    .command('create', 'Creates something for the current M-Prime project.')
+    
 
 program.parse();
