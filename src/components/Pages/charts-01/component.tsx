@@ -26,13 +26,13 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/Atoms/Card"
+} from "@/components"
 import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/components/Atoms/Chart"
-import { Separator } from "@/components/Atoms/Separator"
+} from "@/components"
+import { Separator } from "@/components"
 import { PageComponentType } from '@/lib/types'
 
 export const ChartsPage1: PageComponentType = () => {

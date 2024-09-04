@@ -4,6 +4,7 @@ import { Text } from '.';
 
 
 const meta: Meta<typeof Text> = {
+  title: "Third Party/Animata/Text",
   component: Text,
   tags: ["autodoc"]
 };

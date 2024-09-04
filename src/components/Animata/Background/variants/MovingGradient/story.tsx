@@ -5,7 +5,7 @@ import { BadgeAlert } from 'lucide-react';
 
 
 const meta: Meta<typeof MovingGradient> = {
-  title: "Third Parvty/Animata/Background/MovingGradient",
+  title: "Third Party/Animata/Background/MovingGradient",
   component: MovingGradient,
   tags: ["autodoc"]
 };

@@ -33,7 +33,7 @@ import {
   SheetTrigger,
 } from "@/components"
 
-import { ChartConfig } from "@/components/Atoms/Chart/component"
+import { ChartConfig } from "@/components/ShadCn/Chart/component"
 import {
   Pie,
   PieChart,

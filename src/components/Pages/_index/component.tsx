@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { gql, useQuery } from '@apollo/client'
 import { PageComponentType } from '@/lib/types'
+import Content from './content/_index.mdx'
 
 const GET_PEOPLE = gql`
       query Example{
@@ -31,9 +32,10 @@ const GET_PEOPLE = gql`
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error : {error.message}</p>;
     return (
-      <>
-      got one
-      </>
+      <div>
+        got one
+        <Content />
+      </div>
     );
   }
 
