@@ -1,8 +1,15 @@
-# 📦 Madrox: Extending the Best of UI Component Libraries
+# 🚀 MadroxJS: A Developer-First Component Framework
 
-Madrox is a **developer-first UI component library** built by extending the best components from third-party libraries such as **ShadCN/UI**, **Animata**, and others. The goal is to provide a cohesive, **customizable**, and **modern** set of components that integrate seamlessly into your project. 
+**MadroxJS** is a component-based framework designed to streamline UI development with ready-made tools and workflows. It’s not just a collection of components—it’s an **example-driven, flexible architecture** that encourages you to explore and learn from the built-in design, all while being loose enough to adapt to your specific needs.
 
-Madrox gives you the power to leverage well-established libraries, but with additional flexibility and features tailored to your needs. It’s perfect for teams that want to rapidly build applications without reinventing the wheel, but still want to tweak and extend components as needed.
+## 🎯 Key Features
+
+* **Built-in examples**: MadroxJS isn't just a template; it’s a living example of how to build your own components. Every component in the template is designed to teach you how things work so you can customize, extend, and create your own.
+Flexible structure: While the folder structure is clean and intuitive, it's just a suggestion. You have the freedom to organize your project as you see fit.
+* **Component library**: Install reusable components in your own project via npm install @madroxjs/madroxjs.
+* **Self-contained micro-frontends (MFE)**: Try components remotely without installation, offering a dynamic playground for new features.
+* **MDX-powered content**: Write both your application content and documentation with MDX, blending Markdown and JSX.
+Page-based routing: MadroxJS uses a page-level routing system where routes are controlled as static variables within each page component.
 
 ## 🎯 Why Madrox?
 
