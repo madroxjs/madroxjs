@@ -1,2 +1,2 @@
-export * from './ShadCn'
-export * from './UiBlocks'
+export * as ShadCn from './ThirdParty/ShadCn'
+export * from './ThirdParty/UiBlocks'

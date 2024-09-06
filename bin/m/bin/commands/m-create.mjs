@@ -53,7 +53,7 @@ export async function createCommand(type, nameOfThing, options) {
         ['variants.tsx', variantsTemplate(nameOfThing, options)]
     ]
 
-    if(options.docs) fileTuple.push(['docs.mdx', documentationTemplate(nameOfThing, options)])
+    if(options.docs) fileTuple.push(['docs.mdx', documentationTemplate(nameOfThing, typeFolder[0], options)])
     
     fileTuple.forEach(async ([fileName, fileContents]) => {
         await fs.writeFile(join(targetPath, fileName), fileContents, 'utf-8')

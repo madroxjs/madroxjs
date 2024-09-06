@@ -14,7 +14,7 @@ import {
   Users2,
 } from "lucide-react"
 
-import { Badge } from "@/components"
+import { Badge } from "@/components/ThirdParty/ShadCn"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -22,8 +22,8 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/components"
-import { Button } from "@/components"
+} from "@/components/ThirdParty/ShadCn"
+import { Button } from "@/components/ThirdParty/ShadCn"
 import {
   Card,
   CardContent,
@@ -31,7 +31,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components"
+} from "@/components/ThirdParty/ShadCn"
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -40,9 +40,9 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components"
-import { Input } from "@/components"
-import { Sheet, SheetContent, SheetTrigger } from "@/components"
+} from "@/components/ThirdParty/ShadCn"
+import { Input } from "@/components/ThirdParty/ShadCn"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ThirdParty/ShadCn"
 import {
   Table,
   TableBody,
@@ -50,18 +50,18 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components"
+} from "@/components/ThirdParty/ShadCn"
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/components"
+} from "@/components/ThirdParty/ShadCn"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/components"
+} from "@/components/ThirdParty/ShadCn"
 import { PageComponentType } from "@/lib/types"
 
 export const DashboardPage6: PageComponentType = () => {

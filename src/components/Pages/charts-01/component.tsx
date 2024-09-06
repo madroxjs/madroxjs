@@ -26,13 +26,13 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components"
+} from "@/components/ThirdParty/ShadCn"
 import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/components"
-import { Separator } from "@/components"
+} from "@/components/ThirdParty/ShadCn"
+import { Separator } from "@/components/ThirdParty/ShadCn"
 import { PageComponentType } from '@/lib/types'
 
 export const ChartsPage1: PageComponentType = () => {

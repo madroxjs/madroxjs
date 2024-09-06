@@ -1,6 +1,6 @@
 import { CircleUser, Menu, Package2, Search } from "lucide-react"
 
-import { Button } from "@/components"
+import { Button } from "@/components/ThirdParty/ShadCn"
 import {
   Card,
   CardContent,
@@ -8,8 +8,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components"
-import { Checkbox } from "@/components"
+} from "@/components/ThirdParty/ShadCn"
+import { Checkbox } from "@/components/ThirdParty/ShadCn"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -17,9 +17,9 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components"
-import { Input } from "@/components"
-import { Sheet, SheetContent, SheetTrigger } from "@/components"
+} from "@/components/ThirdParty/ShadCn"
+import { Input } from "@/components/ThirdParty/ShadCn"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ThirdParty/ShadCn"
 import { PageComponentType } from "@/lib/types"
 
 export const DashboardPage4: PageComponentType = () => {

@@ -10,7 +10,7 @@ import {
   
   Input,
   Label,
-} from '@/components'
+} from "@/components/ThirdParty/ShadCn"
 import { PageComponentType } from '@/lib/types'
 
 export const LoginForm1: PageComponentType = () =>  {

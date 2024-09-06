@@ -74,7 +74,7 @@ import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/components"
+} from "@/components/ThirdParty/ShadCn"
 import { PageComponentType } from "@/lib/types"
 
 export const DashboardPage5: PageComponentType = () => {

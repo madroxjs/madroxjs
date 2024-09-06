@@ -79,15 +79,62 @@ export const ${componentNameCamelCase}Variants = cva(
 export default ${componentNameCamelCase}Variants`
 }
 
-export const documentationTemplate = (componentName, options) => {
-  if(options.docs) {
-    options
-  }
+export const documentationTemplate = (componentName, type, options) => {
+  return (`import { Meta } from '@storybook/blocks'
 
+<Meta title="components/${changeCase.pascalCase(type)}/${componentName}" />
 
-  return (`
-    ${componentName}
-  `)
+# ${changeCase.capitalCase(componentName)}
+
+This component is an implementation of the ${changeCase.capitalCase(type)} type. Below is a walkthrough of how this component was created and how you can customize it further.
+
+## Walkthrough
+
+To create the default ${changeCase.capitalCase(componentName)} component, run the following command:
+
+\`\`\`bash
+npx m create ${changeCase.kebabCase(type)} ${changeCase.kebabCase(componentName)}
+\`\`\`
+
+This will generate a new component at \`/src/components/${changeCase.pascalCase(type)}/${changeCase.pascalCase(componentName)}\`. The directory structure for this component will include a \`component.tsx\`, \`story.tsx\`, \`index.ts\`, and \`variants.tsx\`.
+
+### Component Code
+
+Below is the generated \`component.tsx\` for the \`${changeCase.pascalCase(componentName)}\` component:
+
+\`\`\`tsx
+${componentTemplate(componentName, options)}
+\`\`\`
+
+### Index Code
+
+Below is the generated \`component.tsx\` for the \`${changeCase.pascalCase(componentName)}\` component:
+
+\`\`\`tsx
+${indexTemplate(options)}
+\`\`\`
+
+### Storybook Code
+
+Below is the generated \`story.tsx\` for the \`${changeCase.pascalCase(componentName)}\` component:
+
+\`\`\`tsx
+${storyTemplate(componentName, options)}
+\`\`\`
+
+### Variants Code
+
+Below is the generated \`variants.tsx\` for the \`${changeCase.pascalCase(componentName)}\` component:
+
+\`\`\`tsx
+${variantsTemplate(componentName, options)}
+\`\`\`
+
+## Customization
+
+{/* Add your documentation here */}
+
+`)
 }
 
 export const atomTemplate = (componentName) => componentTemplate(componentName)

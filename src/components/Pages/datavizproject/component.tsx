@@ -31,9 +31,9 @@ import {
   Sheet,
   SheetContent,
   SheetTrigger,
-} from "@/components"
+} from "@/components/ThirdParty/ShadCn"
 
-import { ChartConfig } from "@/components/ShadCn/Chart/component"
+import { ChartConfig } from "@/components/ThirdParty/ShadCn/Chart/component"
 import {
   Pie,
   PieChart,

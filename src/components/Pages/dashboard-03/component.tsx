@@ -43,7 +43,7 @@ import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/components"
+} from "@/components/ThirdParty/ShadCn"
 
 import { PageComponentType } from '@/lib/types'
 

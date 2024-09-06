@@ -44,7 +44,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components"
+} from "@/components/ThirdParty/ShadCn"
 import { PageComponentType } from '@/lib/types'
 
 export const DashboardPage1: PageComponentType = () =>  {

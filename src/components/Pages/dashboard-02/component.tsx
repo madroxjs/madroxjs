@@ -35,7 +35,7 @@ import {
   SheetContent,
   SheetTrigger 
 
-} from "@/components"
+} from "@/components/ThirdParty/ShadCn"
 
 import { PageComponentType } from '@/lib/types'
 

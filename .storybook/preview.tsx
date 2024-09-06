@@ -4,7 +4,7 @@ import type { Preview } from "@storybook/react";
 import '../src/styles/globals.css';
 import { ApolloProvider } from '@apollo/client';
 import { client } from '../src/lib/client'
-import { TooltipProvider } from '../src/components/ShadCn/Tooltip'
+import { TooltipProvider } from '../src/components/ThirdParty/ShadCn/Tooltip'
 
 const preview: Preview = {
   tags: ['autodocs'],
