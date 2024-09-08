@@ -57,13 +57,22 @@ export default {
       {
         test: /\.mdx?$/,
         use: [
-          'babel-loader',
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-react'],
+            },
+          },  
           '@mdx-js/loader',
         ],
       },
       {
         resourceQuery: /raw/,
         type: 'asset/source',
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
       },
     ],
   },

@@ -11,8 +11,8 @@
     "prefix": ""
   },
   "aliases": {
-    "components": "@/components",
+    "components": "@/components/ThirdParty",
     "utils": "@/lib/utils",
-    "ui": "@/components/ShadCn/WIP"
+    "ui": "@/components/ThirdParty/ShadCn"
   }
 }

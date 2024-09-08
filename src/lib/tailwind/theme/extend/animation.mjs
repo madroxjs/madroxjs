@@ -27,9 +27,28 @@ const keyframes = {
           "shine": {
             from: { backgroundPosition: '200% 0' },
             to: { backgroundPosition: '-200% 0' },
-          },  
+        },  
+    },
+    'magic-ui': {
+        grid: {
+            "0%": { transform: "translateY(-50%)" },
+            "100%": { transform: "translateY(0)" },
+        },
+        "shine-pulse": {
+            "0%": {
+              "background-position": "0% 0%",
+            },
+            "50%": {
+              "background-position": "100% 100%",
+            },
+            to: {
+              "background-position": "0% 0%",
+            },
+        },  
     }
+
 }
+
 const animations = {
     shadcn: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -39,16 +58,21 @@ const animations = {
         "meteor": "meteor var(--duration) var(--delay) ease-in-out infinite",
         "pop-blob": "pop-blob 5s infinite",
         "shine": "shine 8s ease-in-out infinite",
+    },
+    'magic-ui': {
+        grid: "grid 15s linear infinite",
     }
 }
 
 export default {
     animation: {
         ...animations.shadcn,
-        ...animations.animata
+        ...animations.animata,
+        ...animations['magic-ui']
     },
     keyframes: {
         ...keyframes.shadcn,
-        ...keyframes.animata
+        ...keyframes.animata,
+        ...keyframes['magic-ui']
     },
 }

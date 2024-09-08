@@ -23,6 +23,9 @@ export default {
             '"Courier New"',
             'monospace',
         ],
+        display: [
+            '"Bangers"'
+        ]
     },
     fontSize: {
         xs: ['0.75rem', { lineHeight: '1rem' }],

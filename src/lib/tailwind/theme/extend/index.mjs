@@ -1,37 +1,37 @@
-import accessiblityPrimitive from "./accessiblity.mjs"
-import animationPrimitive from "./animation.mjs"
-import backgroundsPrimitive from "./backgrounds.mjs"
-import bordersPrimitive from './borders'
-import colorsPrimitive from './colors'
-import effectsPrimitive from './effects'
-import filtersPrimitive from './filters'
-import gridPrimitive from './grid'
-import interactivityPrimitive from './interactivity'
-import layoutPrimitive from './layout'
-import sizingPrimitive from './sizing'
-import spacingPrimitive from './spacing'
-import svgPrimitive from './svg'
-import tablesPrimitive from './tables'
-import transformsPrimitive from './transforms'
-import typographyPrimitive from './typography'
+import accessiblity from "./accessiblity"
+import animation from "./animation"
+import backgrounds from "./backgrounds"
+import borders from './borders'
+import colors from './colors'
+import effects from './effects'
+import filters from './filters'
+import grid from './grid'
+import interactivity from './interactivity'
+import layout from './layout'
+import sizing from './sizing'
+import spacing from './spacing'
+import svg from './svg'
+import tables from './tables'
+import transforms from './transforms'
+import typography from './typography'
 
 
-const accessiblity = accessiblityPrimitive.default
-const animation = animationPrimitive.default
-const backgrounds = backgroundsPrimitive.default
-const borders = bordersPrimitive.default
-const colors = colorsPrimitive.default
-const effects = effectsPrimitive.default
-const filters = filtersPrimitive.default
-const grid = gridPrimitive.default
-const interactivity = interactivityPrimitive.default
-const layout = layoutPrimitive.default
-const sizing = sizingPrimitive.default
-const spacing = spacingPrimitive.default
-const svg = svgPrimitive.default
-const tables = tablesPrimitive.default
-const transforms = transformsPrimitive.default
-const typography = typographyPrimitive.default
+// const accessiblity = accessiblity.default
+// const animation = animation.default
+// const backgrounds = backgrounds.default
+// const borders = borders.default
+// const colors = colors.default
+// const effects = effects.default
+// const filters = filters.default
+// const grid = grid.default
+// const interactivity = interactivity.default
+// const layout = layout.default
+// const sizing = sizing.default
+// const spacing = spacing.default
+// const svg = svg.default
+// const tables = tables.default
+// const transforms = transforms.default
+// const typography = typography.default
 
 export default {
   ...accessiblity,
@@ -52,21 +52,21 @@ export default {
   colors,
 }
 
-export {
-  accessiblity,
-  animation,
-  backgrounds,
-  borders,
-  colors,
-  effects,
-  filters,
-  grid,
-  interactivity,
-  layout,
-  sizing,
-  spacing,
-  svg,
-  tables,
-  transforms,
-  typography,
-}
+// export {
+//   accessiblity,
+//   animation,
+//   backgrounds,
+//   borders,
+//   colors,
+//   effects,
+//   filters,
+//   grid,
+//   interactivity,
+//   layout,
+//   sizing,
+//   spacing,
+//   svg,
+//   tables,
+//   transforms,
+//   typography,
+// }
