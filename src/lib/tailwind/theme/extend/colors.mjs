@@ -49,4 +49,11 @@ export default ({ colors }) => ({
       "blur-20": "blur(20px)",
       "blur-25": "blur(25px)",
     },
+    'comics': {
+      'caption': {
+        light: '#fef896',
+        DEFAULT: "#e3ec1a",
+        'shadow': "#350604"
+      }
+    }
   })

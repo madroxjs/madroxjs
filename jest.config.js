@@ -28,7 +28,8 @@ export default {
     '**/__tests__/**/*.ts?(x)',
     '**/?(*.)+(spec|test).ts?(x)',
     '**/test.ts?(x)',
-    '**/tests/unit.ts?(x)'
+    '**/tests/unit.ts?(x)',
+    '**/unit.ts?(x)'
   ],
 
 }
