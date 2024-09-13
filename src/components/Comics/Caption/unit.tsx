@@ -1,11 +1,7 @@
-/**
- * @jest-environment jsdom
- */
-
 import '@testing-library/jest-dom'
 
-import { render, screen } from '@testing-library/react'
-import { fireEvent } from '@storybook/test'
+// import { render, screen } from '@testing-library/react'
+// import { fireEvent } from '@storybook/test'
 
 describe('<Caption />', () => {
     describe('Valid Props', () => {

@@ -19,7 +19,8 @@
     "storybook": "cross-env mode=storybook storybook dev -p 7001",
     "preview": "cross-env mode=production vite preview",
     "build-storybook": "cross-env mode=production storybook build",
-    "postbuild": "node generate-main-css.mjs"
+    "postbuild": "node generate-main-css.mjs",
+    "test": "jest"
   },
   "dependencies": {
     "@apollo/client": "^3.11.1",
@@ -138,6 +139,7 @@
     "tailwindcss": "^3.4.10",
     "ts-jest": "^29.2.4",
     "ts-loader": "^9.5.1",
+    "ts-node": "^10.9.2",
     "typescript": "^5.5.4",
     "url-loader": "^4.1.1",
     "vite": "^5.3.4",

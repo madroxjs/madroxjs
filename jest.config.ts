@@ -16,7 +16,6 @@
 export default {
   preset: 'ts-jest',
   testEnvironment: 'node',
-  setupFilesAfterEnv: ['./setupTests.ts'],
   transform: {
     '^.+\\.tsx?$': 'ts-jest',
   },
