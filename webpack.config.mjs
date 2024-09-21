@@ -6,6 +6,10 @@ import pkg from 'webpack';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 
+import grayMatter from 'gray-matter';
+import remarkFrontmatter from 'remark-frontmatter';
+
+
 const { container } = pkg;
 const { ModuleFederationPlugin } = container;
 
@@ -55,15 +59,37 @@ export default {
         type: 'asset/resource',
       },
       {
-        test: /\.mdx?$/,
+        test: /\.mdx?$/, // Ensures only MDX files are processed by the loader
         use: [
           {
             loader: 'babel-loader',
             options: {
               presets: ['@babel/preset-react'],
             },
-          },  
-          '@mdx-js/loader',
+          },
+          {
+            loader: '@mdx-js/loader',
+            options: {
+              options: {
+                remarkPlugins: [
+                  remarkFrontmatter,
+                  () => (tree, file) => {
+                    // Use gray-matter to parse the frontmatter
+                    const { data } = grayMatter(file.contents);
+      
+                    // Generate export tokens for the frontmatter data
+                    const exportTokens = Object.keys(data)
+                      .map((key) => `export const ${key} = ${JSON.stringify(data[key])};`)
+                      .join('\n');
+      
+                    // Add the frontmatter exports to the file content
+                    file.contents = `${exportTokens}\n${file.contents}`;
+                  },
+                ],
+              },
+              rehypePlugins: [],
+            },
+          },
         ],
       },
       {

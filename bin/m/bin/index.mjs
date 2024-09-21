@@ -11,6 +11,6 @@ program
 
 program
     .command('create', 'Creates something for the current M-Prime project.')
-    
+    .command('generate', 'Generates unit tests and stories from existing typescript files.')
 
 program.parse();

@@ -1,15 +1,15 @@
 import type { StorybookConfig } from '@storybook/react-webpack5';
 import { debug } from 'console';
-import path from 'path';
+import path, { dirname, join } from 'path';
 
 const config: StorybookConfig = {
   stories: ["../src/**/*.mdx", "../src/**/story.@(js|jsx|mjs|ts|tsx)"],
   addons: [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@chromatic-com/storybook",
-    "@storybook/addon-interactions",
-    "@storybook/addon-a11y",
+    getAbsolutePath("@storybook/addon-links"),
+    getAbsolutePath("@storybook/addon-essentials"),
+    getAbsolutePath("@chromatic-com/storybook"),
+    getAbsolutePath("@storybook/addon-interactions"),
+    getAbsolutePath("@storybook/addon-a11y"),
     {
       name: '@storybook/addon-styling-webpack',
       options: {
@@ -39,11 +39,11 @@ const config: StorybookConfig = {
 
   ],
   framework: {
-    name: "@storybook/react-webpack5",
+    name: getAbsolutePath("@storybook/react-webpack5"),
     options: {},
   },
   core: {
-    builder: "@storybook/builder-webpack5",
+    builder: getAbsolutePath("@storybook/builder-webpack5"),
   },
   webpackFinal: async (config) => {
     // Resolve aliases
@@ -105,3 +105,7 @@ const config: StorybookConfig = {
 };
 
 export default config;
+
+function getAbsolutePath(value: string): any {
+  return dirname(require.resolve(join(value, "package.json")));
+}

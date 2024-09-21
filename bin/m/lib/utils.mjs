@@ -5,6 +5,7 @@ import { dirname, join } from 'path';
 import { existsSync } from 'fs';
 import { fileURLToPath } from 'url';
 import path from 'node:path';
+import ts from 'typescript';
 
 export const colors = chalk
 export const __filename = fileURLToPath(import.meta.url);
@@ -65,3 +66,29 @@ const overrideConsole = (method) => {
 // };
 
 // marked.use(markedTerminal());
+
+// Helper function to extract props from a TypeScript interface
+export const extractPropsFromInterface = (sourceFile, interfaceName) => {
+    const result = {};
+    
+    const visit = (node) => {
+        if(ts.isInterfaceDeclaration(node)) console.log(node.name.text, interfaceName)
+      if (
+        ts.isInterfaceDeclaration(node) &&
+        node.name.text === interfaceName
+      ) {
+        node.members.forEach((member) => {
+          if (ts.isPropertySignature(member) && member.name) {
+            const propName = member.name.getText();
+            const propType = member.type?.getText();
+            result[propName] = propType;
+          }
+        });
+      }
+      ts.forEachChild(node, visit);
+    };
+    
+    ts.forEachChild(sourceFile, visit);
+    return result;
+  };
+  

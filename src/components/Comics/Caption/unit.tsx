@@ -5,6 +5,7 @@ import '@testing-library/jest-dom'
 
 describe('<Caption />', () => {
     describe('Valid Props', () => {
+        test('asChild', () => {})
         describe('shadow', () => {
             test('none', () => {})
             test('bottom-right', () => {})

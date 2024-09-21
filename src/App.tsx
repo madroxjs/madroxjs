@@ -18,7 +18,7 @@ const router = createHashRouter(Object.entries(pages).map(([_, Element]) => ({
 
 function App() {
   return (
-    <Theme className='flex justify-center align-center' accentColor="crimson" grayColor="sand" radius="large" scaling="95%" style={{width: '100vw'}}>
+    <Theme className='flex justify-center' accentColor="crimson" grayColor="sand" radius="large" scaling="100%" style={{width: '100%', overflow: 'hidden'}}>
       <RouterProvider router={router} />
     </Theme>
   )

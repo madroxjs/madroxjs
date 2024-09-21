@@ -3,7 +3,6 @@ import { LoginForm1 } from '.';
 
 const meta: Meta<typeof LoginForm1> = {
   component: LoginForm1,
-  title: "Components/Pages/authentication-01"
 };
 
 export default meta;

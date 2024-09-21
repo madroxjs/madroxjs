@@ -5,8 +5,11 @@ import { PageComponentType } from '@/lib/types'
 import { HeroSection } from '@/components/ThirdParty/UiBlocks';
 import { Button } from "@/components/ThirdParty/ShadCn/Button";
 import { ChevronRightIcon } from "lucide-react";
-import { Caption } from '@/components/Comics';
+import { Caption } from '@/components/Comics/index';
 import { IconSection } from '@/components/ThirdParty/UiBlocks/IconSection';
+import MdxContent from './content.mdx'
+
+import { someText } from './content.mdx'
 
 // import { Caption } from '@/components/Comics/index';
 
@@ -28,11 +31,12 @@ import { IconSection } from '@/components/ThirdParty/UiBlocks/IconSection';
 
 export const Content = () => <>
 {/* Hero */}
+  <MdxContent />
   <div className="container relative py-24 lg:py-32">
     {/* Announcement Banner */}
 
     <div className="flex justify-center">
-    <Caption gradiant className='absolute top-4 left-4'>Suddenly...</Caption>
+    <Caption gradiant className='absolute top-4 left-4'>{someText}...</Caption>
 
       <a
         className="inline-flex items-center gap-x-2 border text-sm p-1 ps-3 rounded-full transition"
@@ -61,7 +65,7 @@ export const Content = () => <>
     {/* Title */}
     <div className="mt-5 max-w-2xl text-center mx-auto">
       <h1 className="scroll-m-20 text-4xl font-happy-monkey-regular tracking-tight lg:text-5xl">
-        MadroxJS
+        Madrox JS
       </h1>
     </div>
     {/* End Title */}

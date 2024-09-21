@@ -1,11 +1,12 @@
 import { Command } from 'commander';
 // import { colors } from '../../lib/utils.mjs';
-import { __projectroot, colors } from '../../lib/utils.mjs'
+import { __projectroot, colors, extractPropsFromInterface } from '../../lib/utils.mjs'
 import { join } from 'path';
 import fs from 'fs-extra';
 import * as changeCase from "change-case";
 import { componentTemplate, indexTemplate, variantsTemplate, storyTemplate, documentationTemplate } from '../../templates/index.mjs'
 import { log } from 'console'
+import ts from 'typescript';
 
 const program = new Command();
 
@@ -18,10 +19,36 @@ program
     .version('0.9.0')
     .action(createCommand);
 
+export async function createTest(type, nameOfThing, typeFolder) {
+    const componentFilePath = join(__projectroot, 'src', 'components', ...typeFolder, 'component.tsx')
+
+        // Read and parse the TypeScript file
+        const sourceCode = fs.readFileSync(componentFilePath, 'utf-8');
+        const sourceFile = ts.createSourceFile(
+          'component.tsx',
+          sourceCode,
+          ts.ScriptTarget.Latest,
+          true
+        );
+    
+        // Extract component name and props interface
+        const componentName = changeCase.pascalCase(typeFolder[typeFolder.length - 1])
+        const propsInterface = `${componentName}Props`;
+    
+        // Extract props from the props interface
+        const props = extractPropsFromInterface(sourceFile, propsInterface);
+    
+        // // Generate unit tests based on extracted props
+        // const unitTest = generateUnitTests(componentName, props);
+    
+        // // Output the unit test to the console (or save to a file)
+        console.log({props});
+    
+}
+
 export default program;
 
 export async function createCommand(type, nameOfThing, options) {
-    
     let typeFolder = type.split('/');
     switch (typeFolder[0]) {
         case "atom":
@@ -43,9 +70,12 @@ export async function createCommand(type, nameOfThing, options) {
             typeFolder[0] = changeCase.pascalCase(typeFolder[0])
             break;
     }
-    console.log(options)
+
+    if(nameOfThing == 'unit') return createTest(type, nameOfThing, typeFolder, options)
     const targetPath = join(__projectroot, 'src', 'components', ...typeFolder, changeCase.pascalCase(nameOfThing))
     await fs.ensureDir(targetPath)
+
+    
     const fileTuple = [
         ['component.tsx', componentTemplate(nameOfThing, options)],
         ['index.ts', indexTemplate(options)],
