@@ -1,5 +1,42 @@
 import * as changeCase from "change-case";
 
+export const unitTestTemplate = ({componentName, props, variants}) => {
+  console.log(Object.keys(variants))
+  return `/**
+ * @jest-environment jsdom
+ */
+
+import '@testing-library/jest-dom';
+import { 
+  render, 
+  // screen, 
+  // fireEvent
+} from '@testing-library/react';
+import { ${componentName} } from '.';
+// import faker from '@faker-js/faker';
+
+describe('<${componentName} />', () => {
+  describe('Props', () => {
+      test('debug', () => {
+        const { debug } = render(<${componentName} />);
+        debug()
+      });
+  });
+  describe('Variants', () => {
+${variants ? Object.entries(variants).map(([variantName, variantMetadata]) => `
+      describe('${variantName}', () => {
+  ${variantMetadata.options ? variantMetadata.options.map(option => `
+        test('${option}', () => {
+          const { container } = render(<${componentName} ${variantName}={"${option}"} />)
+          expect(container).toMatchSnapshot();
+        })`).join('') : ''}
+      })`).join('') : ''}
+    })
+  })
+`
+}
+
+
 export const componentTemplate = (componentName) => {
     const componentNameTitleCase = changeCase.pascalCase(componentName)
     const componentNameCamelCase = changeCase.camelCase(componentName)

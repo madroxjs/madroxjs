@@ -7,6 +7,7 @@ import * as path from 'path';
 import * as ts from 'typescript';
 // import faker from '@faker-js/faker';
 import { __projectroot } from '../../lib/utils.mjs'
+import { unitTestTemplate } from '../../templates/index.mjs'
 import { getComponentPropsAndVariants } from '../../lib/helpers/typescript.mjs'
 
 
@@ -14,13 +15,18 @@ import { getComponentPropsAndVariants } from '../../lib/helpers/typescript.mjs'
 const program = new Command();
 
 const generateUnitTestCommand = async (type, relativeComponentPath) => {
-    const componentFolderPath = join(__projectroot, 'src', 'components', relativeComponentPath)
-    const fullComponentPath = path.resolve(`${componentFolderPath}/component.tsx`);
-    const fullVariantsPath = path.resolve(`${componentFolderPath}/variants.tsx`);
+    const pascalComponentPath = relativeComponentPath
+    const componentName = relativeComponentPath.split('/').pop()
+    const componentFolderPath = join(__projectroot, 'src', 'components', pascalComponentPath)
     const fullUnitTestPath = path.resolve(`${componentFolderPath}/unit.tsx`);
-    const result = await getComponentPropsAndVariants(componentFolderPath)
-    console.log(result.variants)
+    const { props, variants } = await getComponentPropsAndVariants(componentFolderPath)
+    const sourceCodeForUnitTest = unitTestTemplate({componentName, props, variants})
+    fs.writeFile(fullUnitTestPath, sourceCodeForUnitTest, () => {
+      console.log(`Wrote ${fullUnitTestPath}`)
+    })
+
 };
+
 
 
 // Main command
