@@ -1,7 +1,7 @@
 import * as changeCase from "change-case";
 
 export const unitTestTemplate = ({componentName, props, variants}) => {
-  console.log(Object.keys(variants))
+  props;
   return `/**
  * @jest-environment jsdom
  */
@@ -9,11 +9,10 @@ export const unitTestTemplate = ({componentName, props, variants}) => {
 import '@testing-library/jest-dom';
 import { 
   render, 
-  // screen, 
-  // fireEvent
+  screen, 
 } from '@testing-library/react';
-import { ${componentName} } from '.';
-// import faker from '@faker-js/faker';
+import { ${componentName} } from '..';
+import { faker } from '@faker-js/faker';
 
 describe('<${componentName} />', () => {
   describe('Props', () => {
@@ -25,9 +24,12 @@ describe('<${componentName} />', () => {
   describe('Variants', () => {
 ${variants ? Object.entries(variants).map(([variantName, variantMetadata]) => `
       describe('${variantName}', () => {
-  ${variantMetadata.options ? variantMetadata.options.map(option => `
-        test('${option}', () => {
-          const { container } = render(<${componentName} ${variantName}={"${option}"} />)
+  ${variantMetadata.options ? Object.entries(variantMetadata.options).map(([optionName, optionValue]) => `
+        test('${optionName}', () => {
+          const id = faker.string.alpha({ length: 5, casing: 'lower' })
+          const { container } = render(<${componentName} ${variantName}={"${optionName}"} data-testid={id} />)
+          const component = screen.getByTestId(id)
+          expect(component).toHaveClass('${optionValue}')
           expect(container).toMatchSnapshot();
         })`).join('') : ''}
       })`).join('') : ''}

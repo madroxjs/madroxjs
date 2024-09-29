@@ -20,7 +20,7 @@
     "preview": "cross-env mode=production vite preview",
     "build-storybook": "cross-env mode=production storybook build",
     "postbuild": "node generate-main-css.mjs",
-    "test": "jest"
+    "test": "jest --coverage -u"
   },
   "dependencies": {
     "@apollo/client": "^3.11.1",
@@ -106,6 +106,7 @@
     "@storybook/react-webpack5": "^8.3.0",
     "@storybook/test": "^8.3.0",
     "@svgr/webpack": "^8.1.0",
+    "@types/fs-extra": "^11.0.4",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.14.12",
     "@types/react": "^18.3.3",
