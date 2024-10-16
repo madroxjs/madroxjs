@@ -3,6 +3,16 @@ import { type VariantProps } from "class-variance-authority"
 import { alertVariants } from "."
 import { cn } from "@/lib/utils"
 
+/**
+ * @example
+ * <>
+ *   <Terminal className="h-4 w-4" />
+ *   <AlertTitle>Heads up!</AlertTitle>
+ *   <AlertDescription>
+ *     You can add components to your app using the cli.
+ *   </AlertDescription>
+ *  </>
+ */
 const Alert = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof alertVariants>

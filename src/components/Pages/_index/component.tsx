@@ -9,8 +9,6 @@ import { Caption } from '@/components/Comics/index';
 import { IconSection } from '@/components/ThirdParty/UiBlocks/IconSection';
 import MdxContent from './content.mdx'
 
-import { someText } from './content.mdx'
-
 // import { Caption } from '@/components/Comics/index';
 
 // const GET_PEOPLE = gql`
@@ -36,7 +34,7 @@ export const Content = () => <>
     {/* Announcement Banner */}
 
     <div className="flex justify-center">
-    <Caption gradiant className='absolute top-4 left-4'>{someText}...</Caption>
+    <Caption gradiant className='absolute top-4 left-4'>{"Meanwhile"}...</Caption>
 
       <a
         className="inline-flex items-center gap-x-2 border text-sm p-1 ps-3 rounded-full transition"
@@ -128,12 +126,14 @@ export const Content = () => <>
     // if (loading) return <p>Loading...</p>;
     // if (error) return <p>Error : {error.message}</p>;
     return (
+      <>
       <div className='font-komika-text'>
         <HeroSection.SimpleCentered className='relative'>
           <Content />
         </HeroSection.SimpleCentered>
         <IconSection.CircleIconsCenterAligned />
       </div>
+      </>
     );
   }
 

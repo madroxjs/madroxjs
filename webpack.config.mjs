@@ -2,13 +2,10 @@ import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import pkg from 'webpack';
+import process from 'process'
 
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
-
-import grayMatter from 'gray-matter';
-import remarkFrontmatter from 'remark-frontmatter';
-
 
 const { container } = pkg;
 const { ModuleFederationPlugin } = container;
@@ -17,15 +14,22 @@ const { ModuleFederationPlugin } = container;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
+// Try the environment variable, otherwise use root
+const ASSET_PATH = process.env.ASSET_PATH || '/';
+
+const packageJson = await import('./package.json', {
+  with: { type: "json" },
+})
+
 export default {
   entry: './src/main.tsx',  // Entry point
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[contenthash].js',
-    publicPath: '/madroxjs/',
+    publicPath: ASSET_PATH,
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.mjs'],
     alias: {
       '@': path.resolve(__dirname, 'src'),
     },
@@ -38,7 +42,7 @@ export default {
         exclude: /node_modules/,
       },
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(js|jsx|mjs)$/,
         use: 'babel-loader',
         exclude: /node_modules/,
       },
@@ -46,8 +50,24 @@ export default {
         test: /\.css$/,  // Handle CSS files with Tailwind CSS
         use: [
           MiniCssExtractPlugin.loader,
-          'css-loader',
-          'postcss-loader',  // Applies PostCSS transformations (including Tailwind CSS)
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+            }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                ident: 'postcss',
+                plugins: [
+                  'tailwindcss',
+                  'autoprefixer'
+                ]
+              }
+            }
+          }
         ],
       },
       {
@@ -55,41 +75,14 @@ export default {
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
       {
-        test: /\.(png|jpe?g|gif|svg)$/i,
+        test: /\.(png|jpe?g|gif|svg|ogm|mp4|webm|ogg)$/i,
         type: 'asset/resource',
       },
       {
-        test: /\.mdx?$/, // Ensures only MDX files are processed by the loader
+        test: /\.mdx?$/,
         use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              presets: ['@babel/preset-react'],
-            },
-          },
-          {
-            loader: '@mdx-js/loader',
-            options: {
-              options: {
-                remarkPlugins: [
-                  remarkFrontmatter,
-                  () => (tree, file) => {
-                    // Use gray-matter to parse the frontmatter
-                    const { data } = grayMatter(file.contents);
-      
-                    // Generate export tokens for the frontmatter data
-                    const exportTokens = Object.keys(data)
-                      .map((key) => `export const ${key} = ${JSON.stringify(data[key])};`)
-                      .join('\n');
-      
-                    // Add the frontmatter exports to the file content
-                    file.contents = `${exportTokens}\n${file.contents}`;
-                  },
-                ],
-              },
-              rehypePlugins: [],
-            },
-          },
+          'babel-loader',
+          '@mdx-js/loader',
         ],
       },
       {
@@ -97,9 +90,19 @@ export default {
         type: 'asset/source',
       },
       {
-        test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        type: 'asset/resource',
-      },
+      test: /\.(png|jpe?g|gif|svg|ogm|mp4|webm|ogg)$/i,
+      use: [
+        {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'assets/',
+            publicPath: 'assets/'
+          }
+        }
+      ]
+    }
+
     ],
   },
   plugins: [
@@ -107,7 +110,7 @@ export default {
       template: './public/index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css',
+      filename: '[name].css',
       chunkFilename: '[id].[contenthash].css'
     }),
     new ModuleFederationPlugin({
@@ -119,19 +122,19 @@ export default {
         react: {
           singleton: true,
           eager: true,
-          requiredVersion: (await import('./package.json', {
-            with: { type: "json" },
-          })).default.dependencies.react,
+          requiredVersion: packageJson.default.dependencies.react,
         },
         'react-dom': {
           singleton: true,
           eager: true,
-          requiredVersion: (await import('./package.json', {
-            with: { type: "json" },
-          })).default.dependencies['react-dom'],
+          requiredVersion: packageJson.default.dependencies['react-dom'],
         },
       },
     }),
+    new pkg.DefinePlugin({
+      'process.env.ASSET_PATH': JSON.stringify(ASSET_PATH),
+    }),
+
   ],
   devServer: {
     static: {
