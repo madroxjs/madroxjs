@@ -3,7 +3,7 @@ import { DWNominatePage } from '.';
 
 const meta: Meta<typeof DWNominatePage> = {
   component: DWNominatePage,
-  title: "Components/Pages"
+  title: "Components/Pages/dw-nominate"
 };
 
 export default meta;

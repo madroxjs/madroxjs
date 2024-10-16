@@ -18,7 +18,9 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "storybook": "cross-env mode=storybook storybook dev -p 7001",
     "preview": "cross-env mode=production vite preview",
-    "build-storybook": "cross-env mode=production storybook build",
+    "build:storybook": "cross-env mode=production storybook build",
+    "build:both": "webpack --config webpack.config.mjs | npm run build:storybook",
+
     "postbuild": "node generate-main-css.mjs",
     "test": "jest --coverage",
     "test:dev": "jest --coverage -u src/components/ThirdParty/ShadCn/Alert"
