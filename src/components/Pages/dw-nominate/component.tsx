@@ -56,4 +56,4 @@ export const DWNominatePage: PageComponentType = () => {
     );
   }
 
-  DWNominatePage.path = "/dw-nominate"
+  DWNominatePage.path = "dw-nominate"
