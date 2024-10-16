@@ -29,7 +29,6 @@ import MdxContent from './content.mdx'
 
 export const Content = () => <>
 {/* Hero */}
-<h1>dm-nominate page</h1>
   <MdxContent />
 {/* End Hero */}
 </>
@@ -49,11 +48,10 @@ export const DWNominatePage: PageComponentType = () => {
     // if (error) return <p>Error : {error.message}</p>;
     return (
       <>
-      <div className='font-komika-text'>
+      <h1>dm-nominate page</h1>
 
-      </div>
       </>
     );
   }
 
-  DWNominatePage.path = "dw-nominate"
+  DWNominatePage.path = "/dw-nominate"

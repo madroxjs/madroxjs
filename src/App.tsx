@@ -11,12 +11,12 @@ import * as pages from './components/Pages'
  * Router documentation https://reactrouter.com/en/main/routers/create-hash-router
  */
 const router = createHashRouter(Object.entries(pages).map(([_, Element]) => {
-  console.log(Element)
   return ({
     ...Element,
     element: <Element />,
   })
-}));
+}), {
+});
 
 console.log(router.routes)
 
