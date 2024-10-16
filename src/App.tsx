@@ -10,17 +10,20 @@ import * as pages from './components/Pages'
 /**
  * Router documentation https://reactrouter.com/en/main/routers/create-hash-router
  */
-const router = createHashRouter(Object.entries(pages).map(([_, Element]) => ({
-  ...Element,
-  element: <Element />,
-})));
+const router = createHashRouter(Object.entries(pages).map(([_, Element]) => {
+  console.log(Element)
+  return ({
+    ...Element,
+    element: <Element />,
+  })
+}));
+
+console.log(router.routes)
 
 
 function App() {
   return (
     <Theme className='flex justify-center' accentColor="crimson" grayColor="sand" radius="large" scaling="100%" style={{width: '100%', overflow: 'hidden'}}>
-            <h1>here!!!</h1>
-
       <RouterProvider router={router} />
     </Theme>
   )
