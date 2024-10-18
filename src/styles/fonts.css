@@ -4,7 +4,7 @@
     font-style: italic;
     font-weight: bold;
     font-display: swap;
-    src: url(../assets/fonts/Action-Man/Action_Man_Bold_Italic.ttf) format('ttf');
+    src: url(../assets/fonts/Action-Man/Action_Man_Bold_Italic.ttf) format('truetype');
 }
 
 @font-face {
@@ -12,7 +12,7 @@
     font-style: normal;
     font-weight: bold;
     font-display: swap;
-    src: url(../assets/fonts/Action-Man/Action_Man_Bold.ttf) format('ttf');
+    src: url(../assets/fonts/Action-Man/Action_Man_Bold.ttf) format('truetype');
 }
 
 @font-face {
@@ -20,7 +20,7 @@
     font-style: italic;
     font-weight: bold;
     font-display: swap;
-    src: url(../assets/fonts/Action-Man/Action_Man_Extended_Bold_Italic.ttf) format('ttf');
+    src: url(../assets/fonts/Action-Man/Action_Man_Extended_Bold_Italic.ttf) format('truetype');
 }
 
 @font-face {
@@ -28,7 +28,7 @@
     font-style: normal;
     font-weight: bold;
     font-display: swap;
-    src: url(../assets/fonts/Action-Man/Action_Man_Extended_Bold.ttf) format('ttf');
+    src: url(../assets/fonts/Action-Man/Action_Man_Extended_Bold.ttf) format('truetype');
 }
 
 @font-face {
@@ -36,7 +36,7 @@
     font-style: italic;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/Action-Man/Action_Man_Extended_Italic.ttf) format('ttf');
+    src: url(../assets/fonts/Action-Man/Action_Man_Extended_Italic.ttf) format('truetype');
 }
 
 @font-face {
@@ -44,7 +44,7 @@
     font-style: normal;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/Action-Man/Action_Man_Extended.ttf) format('ttf');
+    src: url(../assets/fonts/Action-Man/Action_Man_Extended.ttf) format('truetype');
 }
 
 @font-face {
@@ -52,7 +52,7 @@
     font-style: italic;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/Action-Man/Action_Man_Italic.ttf) format('ttf');
+    src: url(../assets/fonts/Action-Man/Action_Man_Italic.ttf) format('truetype');
 }
 
 @font-face {
@@ -60,7 +60,7 @@
     font-style: italic;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/Action-Man/Action_Man_Shaded_Italic.ttf) format('ttf');
+    src: url(../assets/fonts/Action-Man/Action_Man_Shaded_Italic.ttf) format('truetype');
 }
 
 @font-face {
@@ -68,7 +68,7 @@
     font-style: normal;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/Action-Man/Action_Man_Shaded.ttf) format('ttf');
+    src: url(../assets/fonts/Action-Man/Action_Man_Shaded.ttf) format('truetype');
 }
 
 @font-face {
@@ -76,7 +76,7 @@
     font-style: normal;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/Action-Man/Action_Man.ttf) format('ttf');
+    src: url(../assets/fonts/Action-Man/Action_Man.ttf) format('truetype');
 }
 
 /* Comic Relief */
@@ -85,7 +85,7 @@
     font-style: normal;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/comic-relief/ComicRelief.ttf) format('ttf');
+    src: url(../assets/fonts/comic-relief/ComicRelief.ttf) format('truetype');
 }
 
 /* Delius */
@@ -94,7 +94,7 @@
     font-style: normal;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/delius/delius-regular.ttf) format('ttf');
+    src: url(../assets/fonts/delius/delius-regular.ttf) format('truetype');
 }
 
 /* Gloria Hallelujah */
@@ -103,7 +103,7 @@
     font-style: normal;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/gloria-hallelujah/GloriaHallelujah.ttf) format('ttf');
+    src: url(../assets/fonts/gloria-hallelujah/GloriaHallelujah.ttf) format('truetype');
 }
 
 /* Happy Monkey */
@@ -112,7 +112,7 @@
     font-style: normal;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/happy-monkey/HappyMonkey-Regular.ttf) format('ttf');
+    src: url(../assets/fonts/happy-monkey/HappyMonkey-Regular.ttf) format('truetype');
 }
 
 /* Kalam */
@@ -121,7 +121,7 @@
     font-style: normal;
     font-weight: bold;
     font-display: swap;
-    src: url(../assets/fonts/kalam/Kalam-Bold.ttf) format('ttf');
+    src: url(../assets/fonts/kalam/Kalam-Bold.ttf) format('truetype');
 }
 
 @font-face {
@@ -129,7 +129,7 @@
     font-style: normal;
     font-weight: 300;
     font-display: swap;
-    src: url(../assets/fonts/kalam/Kalam-Light.ttf) format('ttf');
+    src: url(../assets/fonts/kalam/Kalam-Light.ttf) format('truetype');
 }
 
 @font-face {
@@ -137,7 +137,7 @@
     font-style: normal;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/kalam/Kalam-Regular.ttf) format('ttf');
+    src: url(../assets/fonts/kalam/Kalam-Regular.ttf) format('truetype');
 }
 
 /* Karatula */
@@ -146,7 +146,7 @@
     font-style: normal;
     font-weight: bold;
     font-display: swap;
-    src: url(../assets/fonts/Karatula/KARAB___.ttf) format('ttf');
+    src: url(../assets/fonts/Karatula/KARAB___.ttf) format('truetype');
 }
 
 @font-face {
@@ -154,7 +154,7 @@
     font-style: italic;
     font-weight: bold;
     font-display: swap;
-    src: url(../assets/fonts/Karatula/KARABI__.ttf) format('ttf');
+    src: url(../assets/fonts/Karatula/KARABI__.ttf) format('truetype');
 }
 
 @font-face {
@@ -162,7 +162,7 @@
     font-style: italic;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/Karatula/KARAI___.ttf) format('ttf');
+    src: url(../assets/fonts/Karatula/KARAI___.ttf) format('truetype');
 }
 
 @font-face {
@@ -170,7 +170,7 @@
     font-style: normal;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/Karatula/KARAN___.ttf) format('ttf');
+    src: url(../assets/fonts/Karatula/KARAN___.ttf) format('truetype');
 }
 
 /* Komika Axis */
@@ -179,7 +179,7 @@
     font-style: normal;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/Komika-Axis/KOMIKAX_.ttf) format('ttf');
+    src: url(../assets/fonts/Komika-Axis/KOMIKAX_.ttf) format('truetype');
 }
 
 /* Komika Display */
@@ -188,7 +188,7 @@
     font-style: normal;
     font-weight: bold;
     font-display: swap;
-    src: url(../assets/fonts/Komika-Display/Komika_display_bold.ttf) format('ttf');
+    src: url(../assets/fonts/Komika-Display/Komika_display_bold.ttf) format('truetype');
 }
 
 @font-face {
@@ -196,7 +196,7 @@
     font-style: normal;
     font-weight: bold;
     font-display: swap;
-    src: url(../assets/fonts/Komika-Display/Komika_display_kaps_bold.ttf) format('ttf');
+    src: url(../assets/fonts/Komika-Display/Komika_display_kaps_bold.ttf) format('truetype');
 }
 
 @font-face {
@@ -204,7 +204,7 @@
     font-style: normal;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/Komika-Display/Komika_display_kaps.ttf) format('ttf');
+    src: url(../assets/fonts/Komika-Display/Komika_display_kaps.ttf) format('truetype');
 }
 
 @font-face {
@@ -212,7 +212,7 @@
     font-style: normal;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/Komika-Display/Komika_display.ttf) format('ttf');
+    src: url(../assets/fonts/Komika-Display/Komika_display.ttf) format('truetype');
 }
 
 /* Komika Hand */
@@ -221,7 +221,7 @@
     font-style: italic;
     font-weight: bold;
     font-display: swap;
-    src: url(../assets/fonts/Komika-Hand/Komika_Hand_Bold_Italic.ttf) format('ttf');
+    src: url(../assets/fonts/Komika-Hand/Komika_Hand_Bold_Italic.ttf) format('truetype');
 }
 
 @font-face {
@@ -229,7 +229,7 @@
     font-style: normal;
     font-weight: bold;
     font-display: swap;
-    src: url(../assets/fonts/Komika-Hand/Komika_Hand_Bold.ttf) format('ttf');
+    src: url(../assets/fonts/Komika-Hand/Komika_Hand_Bold.ttf) format('truetype');
 }
 
 @font-face {
@@ -237,7 +237,7 @@
     font-style: italic;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/Komika-Hand/Komika_Hand_Italic.ttf) format('ttf');
+    src: url(../assets/fonts/Komika-Hand/Komika_Hand_Italic.ttf) format('truetype');
 }
 
 @font-face {
@@ -245,7 +245,7 @@
     font-style: normal;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/Komika-Hand/Komika_Hand.ttf) format('ttf');
+    src: url(../assets/fonts/Komika-Hand/Komika_Hand.ttf) format('truetype');
 }
 
 @font-face {
@@ -253,7 +253,7 @@
     font-style: normal;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/Komika-Hand/Komika_Parch.ttf) format('ttf');
+    src: url(../assets/fonts/Komika-Hand/Komika_Parch.ttf) format('truetype');
 }
 
 /* Komika Text */
@@ -262,7 +262,7 @@
     font-style: italic;
     font-weight: bold;
     font-display: swap;
-    src: url(../assets/fonts/Komika-Text/KOMTXTBI.ttf) format('ttf');
+    src: url(../assets/fonts/Komika-Text/KOMTXTBI.ttf) format('truetype');
 }
 
 @font-face {
@@ -270,7 +270,7 @@
     font-style: normal;
     font-weight: bold;
     font-display: swap;
-    src: url(../assets/fonts/Komika-Text/KOMTXTB_.ttf) format('ttf');
+    src: url(../assets/fonts/Komika-Text/KOMTXTB_.ttf) format('truetype');
 }
 
 @font-face {
@@ -278,7 +278,7 @@
     font-style: italic;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/Komika-Text/KOMTXTI_.ttf) format('ttf');
+    src: url(../assets/fonts/Komika-Text/KOMTXTI_.ttf) format('truetype');
 }
 
 @font-face {
@@ -286,7 +286,7 @@
     font-style: normal;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/Komika-Text/KOMTXT__.ttf) format('ttf');
+    src: url(../assets/fonts/Komika-Text/KOMTXT__.ttf) format('truetype');
 }
 
 /* SF Arch Rival */
@@ -295,7 +295,7 @@
     font-style: italic;
     font-weight: bold;
     font-display: swap;
-    src: url(../assets/fonts/SF-Arch-Rival/SF_Arch_Rival_Bold_Italic.ttf) format('ttf');
+    src: url(../assets/fonts/SF-Arch-Rival/SF_Arch_Rival_Bold_Italic.ttf) format('truetype');
 }
 
 @font-face {
@@ -303,7 +303,7 @@
     font-style: normal;
     font-weight: bold;
     font-display: swap;
-    src: url(../assets/fonts/SF-Arch-Rival/SF_Arch_Rival_Bold.ttf) format('ttf');
+    src: url(../assets/fonts/SF-Arch-Rival/SF_Arch_Rival_Bold.ttf) format('truetype');
 }
 
 @font-face {
@@ -311,7 +311,7 @@
     font-style: italic;
     font-weight: bold;
     font-display: swap;
-    src: url(../assets/fonts/SF-Arch-Rival/SF_Arch_Rival_Extended_Bold_Italic.ttf) format('ttf');
+    src: url(../assets/fonts/SF-Arch-Rival/SF_Arch_Rival_Extended_Bold_Italic.ttf) format('truetype');
 }
 
 @font-face {
@@ -319,7 +319,7 @@
     font-style: normal;
     font-weight: bold;
     font-display: swap;
-    src: url(../assets/fonts/SF-Arch-Rival/SF_Arch_Rival_Extended_Bold.ttf) format('ttf');
+    src: url(../assets/fonts/SF-Arch-Rival/SF_Arch_Rival_Extended_Bold.ttf) format('truetype');
 }
 
 @font-face {
@@ -327,7 +327,7 @@
     font-style: italic;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/SF-Arch-Rival/SF_Arch_Rival_Extended_Italic.ttf) format('ttf');
+    src: url(../assets/fonts/SF-Arch-Rival/SF_Arch_Rival_Extended_Italic.ttf) format('truetype');
 }
 
 @font-face {
@@ -335,7 +335,7 @@
     font-style: normal;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/SF-Arch-Rival/SF_Arch_Rival_Extended.ttf) format('ttf');
+    src: url(../assets/fonts/SF-Arch-Rival/SF_Arch_Rival_Extended.ttf) format('truetype');
 }
 
 @font-face {
@@ -343,7 +343,7 @@
     font-style: italic;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/SF-Arch-Rival/SF_Arch_Rival_Italic.ttf) format('ttf');
+    src: url(../assets/fonts/SF-Arch-Rival/SF_Arch_Rival_Italic.ttf) format('truetype');
 }
 
 @font-face {
@@ -351,7 +351,7 @@
     font-style: normal;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/SF-Arch-Rival/SF_Arch_Rival.ttf) format('ttf');
+    src: url(../assets/fonts/SF-Arch-Rival/SF_Arch_Rival.ttf) format('truetype');
 }
 
 /* SF Cartoonist Hand */
@@ -360,7 +360,7 @@
     font-style: italic;
     font-weight: bold;
     font-display: swap;
-    src: url(../assets/fonts/SF-Cartoonist-Hand/SF_Cartoonist_Hand_Bold_Italic.ttf) format('ttf');
+    src: url(../assets/fonts/SF-Cartoonist-Hand/SF_Cartoonist_Hand_Bold_Italic.ttf) format('truetype');
 }
 
 @font-face {
@@ -368,7 +368,7 @@
     font-style: normal;
     font-weight: bold;
     font-display: swap;
-    src: url(../assets/fonts/SF-Cartoonist-Hand/SF_Cartoonist_Hand_Bold.ttf) format('ttf');
+    src: url(../assets/fonts/SF-Cartoonist-Hand/SF_Cartoonist_Hand_Bold.ttf) format('truetype');
 }
 
 @font-face {
@@ -376,7 +376,7 @@
     font-style: italic;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/SF-Cartoonist-Hand/SF_Cartoonist_Hand_Italic.ttf) format('ttf');
+    src: url(../assets/fonts/SF-Cartoonist-Hand/SF_Cartoonist_Hand_Italic.ttf) format('truetype');
 }
 
 @font-face {
@@ -384,7 +384,7 @@
     font-style: normal;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/SF-Cartoonist-Hand/SF_Cartoonist_Hand.ttf) format('ttf');
+    src: url(../assets/fonts/SF-Cartoonist-Hand/SF_Cartoonist_Hand.ttf) format('truetype');
 }
 
 /* SF Toontime */
@@ -393,7 +393,7 @@
     font-style: italic;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/SF-Toontime/SF_Toontime_Blotch_Italic.ttf) format('ttf');
+    src: url(../assets/fonts/SF-Toontime/SF_Toontime_Blotch_Italic.ttf) format('truetype');
 }
 
 @font-face {
@@ -401,7 +401,7 @@
     font-style: normal;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/SF-Toontime/SF_Toontime_Blotch.ttf) format('ttf');
+    src: url(../assets/fonts/SF-Toontime/SF_Toontime_Blotch.ttf) format('truetype');
 }
 
 @font-face {
@@ -409,7 +409,7 @@
     font-style: italic;
     font-weight: bold;
     font-display: swap;
-    src: url(../assets/fonts/SF-Toontime/SF_Toontime_Bold_Italic.ttf) format('ttf');
+    src: url(../assets/fonts/SF-Toontime/SF_Toontime_Bold_Italic.ttf) format('truetype');
 }
 
 @font-face {
@@ -417,7 +417,7 @@
     font-style: normal;
     font-weight: bold;
     font-display: swap;
-    src: url(../assets/fonts/SF-Toontime/SF_Toontime_Bold.ttf) format('ttf');
+    src: url(../assets/fonts/SF-Toontime/SF_Toontime_Bold.ttf) format('truetype');
 }
 
 @font-face {
@@ -425,7 +425,7 @@
     font-style: italic;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/SF-Toontime/SF_Toontime_Italic.ttf) format('ttf');
+    src: url(../assets/fonts/SF-Toontime/SF_Toontime_Italic.ttf) format('truetype');
 }
 
 @font-face {
@@ -433,7 +433,7 @@
     font-style: normal;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/SF-Toontime/SF_Toontime.ttf) format('ttf');
+    src: url(../assets/fonts/SF-Toontime/SF_Toontime.ttf) format('truetype');
 }
 
 /* SF Wonder Comic */
@@ -442,7 +442,7 @@
     font-style: italic;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/SF-Wonder-Comic/SF_Wonder_Comic_Blotch_Italic.ttf) format('ttf');
+    src: url(../assets/fonts/SF-Wonder-Comic/SF_Wonder_Comic_Blotch_Italic.ttf) format('truetype');
 }
 
 @font-face {
@@ -450,7 +450,7 @@
     font-style: normal;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/SF-Wonder-Comic/SF_Wonder_Comic_Blotch.ttf) format('ttf');
+    src: url(../assets/fonts/SF-Wonder-Comic/SF_Wonder_Comic_Blotch.ttf) format('truetype');
 }
 
 @font-face {
@@ -458,7 +458,7 @@
     font-style: italic;
     font-weight: bold;
     font-display: swap;
-    src: url(../assets/fonts/SF-Wonder-Comic/SF_Wonder_Comic_Bold_Italic.ttf) format('ttf');
+    src: url(../assets/fonts/SF-Wonder-Comic/SF_Wonder_Comic_Bold_Italic.ttf) format('truetype');
 }
 
 @font-face {
@@ -466,7 +466,7 @@
     font-style: normal;
     font-weight: bold;
     font-display: swap;
-    src: url(../assets/fonts/SF-Wonder-Comic/SF_Wonder_Comic_Bold.ttf) format('ttf');
+    src: url(../assets/fonts/SF-Wonder-Comic/SF_Wonder_Comic_Bold.ttf) format('truetype');
 }
 
 @font-face {
@@ -474,7 +474,7 @@
     font-style: italic;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/SF-Wonder-Comic/SF_Wonder_Comic_Inline_Italic.ttf) format('ttf');
+    src: url(../assets/fonts/SF-Wonder-Comic/SF_Wonder_Comic_Inline_Italic.ttf) format('truetype');
 }
 
 @font-face {
@@ -482,7 +482,7 @@
     font-style: normal;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/SF-Wonder-Comic/SF_Wonder_Comic_Inline.ttf) format('ttf');
+    src: url(../assets/fonts/SF-Wonder-Comic/SF_Wonder_Comic_Inline.ttf) format('truetype');
 }
 
 @font-face {
@@ -490,7 +490,7 @@
     font-style: italic;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/SF-Wonder-Comic/SF_Wonder_Comic_Italic.ttf) format('ttf');
+    src: url(../assets/fonts/SF-Wonder-Comic/SF_Wonder_Comic_Italic.ttf) format('truetype');
 }
 
 @font-face {
@@ -498,7 +498,7 @@
     font-style: normal;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/SF-Wonder-Comic/SF_Wonder_Comic.ttf) format('ttf');
+    src: url(../assets/fonts/SF-Wonder-Comic/SF_Wonder_Comic.ttf) format('truetype');
 }
 
 /* VTC Letterer Pro */
@@ -507,7 +507,7 @@
     font-style: normal;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/VTC-Letterer-Pro/VTC_letterer_pro.ttf) format('ttf');
+    src: url(../assets/fonts/VTC-Letterer-Pro/VTC_letterer_pro.ttf) format('truetype');
 }
 
 /* Yew Basturd */
@@ -516,7 +516,7 @@
     font-style: normal;
     font-weight: bold;
     font-display: swap;
-    src: url(../assets/fonts/Yew-Basturd/YEWBB___.ttf) format('ttf');
+    src: url(../assets/fonts/Yew-Basturd/YEWBB___.ttf) format('truetype');
 }
 
 @font-face {
@@ -524,7 +524,7 @@
     font-style: italic;
     font-weight: bold;
     font-display: swap;
-    src: url(../assets/fonts/Yew-Basturd/YEWBBI__.ttf) format('ttf');
+    src: url(../assets/fonts/Yew-Basturd/YEWBBI__.ttf) format('truetype');
 }
 
 @font-face {
@@ -532,7 +532,7 @@
     font-style: italic;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/Yew-Basturd/YEWBI___.ttf) format('ttf');
+    src: url(../assets/fonts/Yew-Basturd/YEWBI___.ttf) format('truetype');
 }
 
 @font-face {
@@ -540,5 +540,5 @@
     font-style: normal;
     font-weight: normal;
     font-display: swap;
-    src: url(../assets/fonts/Yew-Basturd/YEWBN___.ttf) format('ttf');
+    src: url(../assets/fonts/Yew-Basturd/YEWBN___.ttf) format('truetype');
 }
