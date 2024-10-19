@@ -2,12 +2,11 @@
 // import { gql, useQuery } from '@apollo/client'
 import { PageComponentType } from '@/lib/types'
 // import Content from './content/_index.mdx'
-import { HeroSection } from '@/components/ThirdParty/UiBlocks';
-import { Button } from "@/components/ThirdParty/ShadCn/Button";
-import { ChevronRightIcon } from "lucide-react";
-import { Caption } from '@/components/Comics/index';
-import { IconSection } from '@/components/ThirdParty/UiBlocks/IconSection';
-import MdxContent from './content.mdx'
+// import { HeroSection } from '@/components/ThirdParty/UiBlocks';
+// import { Button } from "@/components/ThirdParty/ShadCn/Button";
+// import { ChevronRightIcon } from "lucide-react";
+// import { Caption } from '@/components/Comics/index';
+// import { IconSection } from '@/components/ThirdParty/UiBlocks/IconSection';
 
 // import { Caption } from '@/components/Comics/index';
 
@@ -24,15 +23,6 @@ import MdxContent from './content.mdx'
 //         }
 //       }  
 // `;
-
-
-
-export const Content = () => <>
-{/* Hero */}
-  <MdxContent />
-{/* End Hero */}
-</>
-
 
 // Define the TypeScript interfaces
 export const DWNominatePage: PageComponentType = () => {

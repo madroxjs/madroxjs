@@ -7,7 +7,6 @@ import { Button } from "@/components/ThirdParty/ShadCn/Button";
 import { ChevronRightIcon } from "lucide-react";
 import { Caption } from '@/components/Comics/index';
 import { IconSection } from '@/components/ThirdParty/UiBlocks/IconSection';
-import MdxContent from './content.mdx'
 
 // import { Caption } from '@/components/Comics/index';
 
@@ -29,7 +28,6 @@ import MdxContent from './content.mdx'
 
 export const Content = () => <>
 {/* Hero */}
-  <MdxContent />
   <div className="container relative py-24 lg:py-32">
     {/* Announcement Banner */}
 
